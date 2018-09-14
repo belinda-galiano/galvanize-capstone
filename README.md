@@ -39,3 +39,5 @@ This links to the board in trello.com where I have some of the user stories of t
 |Adobe XD | Trello.com
 
 ###  Entity Relationship Diagram
+
+(https://github.com/belinda-galiano/galvanize-capstone/blob/master/Entity%20Relationship%20Diagram.png)
