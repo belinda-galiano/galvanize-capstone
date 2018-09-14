@@ -18,9 +18,19 @@ The application is going to track the recipe’s nutrients in real time.
 
 ### User Stories
 This links to the board in trello.com where I have some of the user stories of the project: 
-[User Stories] (https://trello.com/b/5ApCBpUg/capstone-project)
+[User Stories](https://trello.com/b/5ApCBpUg/capstone-project)
 
 ### Technologies 
 
 | Front-end: | Back-end:|
 --- | --- |
+- D3.js  - (new technology for me) |- PostgreSQL
+- Redux -  (new technology for me) |- Express 
+- Sass -  (new technology for me) |
+
+- HTML |
+- CSS |
+- Google’s Material Design | 
+- JavaScript |
+- React |
+- Reach Router |
