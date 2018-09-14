@@ -24,14 +24,14 @@ This links to the board in trello.com where I have some of the user stories of t
 
 | Front-end: | Back-end:
 ------------ | -----------
-- D3.js (new technology for me) |- PostgreSQL
-- Redux (new technology for me) |- Express 
-- Sass (new technology for me) |- Heroku
-- HTML |- Cypress
-- CSS |- Postman
-- Google’s Material Design |-Firebase 
-- JavaScript |
-- React |
-- Reach Router |
+|- D3.js (new technology for me) |- PostgreSQL
+|- Redux (new technology for me) |- Express 
+|- Sass (new technology for me) |- Heroku
+|- HTML |- Cypress
+|- CSS |- Postman
+|- Google’s Material Design |-Firebase 
+|- JavaScript |
+|- React |
+|- Reach Router |
 
 
