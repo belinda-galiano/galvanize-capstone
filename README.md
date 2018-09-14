@@ -33,7 +33,9 @@ This links to the board in trello.com where I have some of the user stories of t
 |- JavaScript |
 |- React |
 |- Reach Router |
-| To prototype the application wireframes: Adobe XD
-| To project-management the workflow in the application: Trello.com
+
+| To prototype the application wireframes: | To project-management the workflow in the application:|
+------- | -------
+|Adobe XD | Trello.com
 
 
