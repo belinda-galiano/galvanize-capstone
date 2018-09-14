@@ -22,17 +22,17 @@ This links to the board in trello.com where I have some of the user stories of t
 
 ### Technologies 
 
-| Front-end: | Back-end:
------------- | -----------
-|- D3.js (new technology for me) |- PostgreSQL
-|- Redux (new technology for me) |- Express 
-|- Sass (new technology for me) |- Heroku
-|- HTML |- Cypress
-|- CSS |- Postman
-|- Google’s Material Design |-Firebase 
-|- JavaScript |
-|- React |
-|- Reach Router |
+| Front-end | Back-end |
+| ------------ | ----------- |
+| D3.js (new technology for me) | PostgreSQL |
+| Redux (new technology for me) | Express |
+| Sass (new technology for me) | Heroku |
+| HTML | Cypress |
+| CSS | Postman |
+| Google’s Material Design | Firebase |
+| JavaScript | |
+| React | |
+| Reach Router | |
 
 | To prototype the application wireframes: | To project-management the workflow in the application:|
 ------- | -------
