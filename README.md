@@ -23,11 +23,10 @@ This links to the board in trello.com where I have some of the user stories of t
 ### Technologies 
 
 | Front-end: | Back-end:|
---- | --- |
-- D3.js  - (new technology for me) |- PostgreSQL
-- Redux -  (new technology for me) |- Express 
-- Sass -  (new technology for me) |
-
+--- | --- 
+- D3.js (new technology for me) | - PostgreSQL
+- Redux (new technology for me) | - Express 
+- Sass (new technology for me) | 
 - HTML |
 - CSS |
 - Google’s Material Design | 
