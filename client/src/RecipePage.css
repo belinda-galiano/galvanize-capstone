@@ -1,8 +1,13 @@
+
 .recipe-img{
-  margin-top: 16px;
-  /* margin-left: 16px; */
-  /* height: 300px; */
-  width: 100%;
+  height: 300px;
+}
+
+.recipe-img-container {
+/*  max-height: 250px;
+  overflow: hidden;*/
+  background: #000;
+  text-align: center;
 }
 .flex-justify-content{
   justify-content: space-around;
@@ -13,6 +18,9 @@
   align-items: center;
   /* justify-content: space-evenly; */
 }
+.tilte{
+  margin: 16px 0px;
+}
 .p-tags{
   color:#0D47A1;
 }
@@ -22,3 +30,4 @@
 .style-list{
   list-style: none;
 }
+.divider-line { width:100%; height:1px; background: #DEDEDE }
