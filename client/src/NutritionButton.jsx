@@ -1,9 +1,9 @@
 import React from 'react';
-import './NutrtionButton.css';
+import './NutritionButton.css';
 import infoIcon from './baseline-info-24px.svg';
 
 
-const NutrtionButton = () => (
+const NutritionButton = () => (
   <div>
     <div className="button-container align-elements">
       <img src={infoIcon} alt="information icon" />
@@ -11,4 +11,4 @@ const NutrtionButton = () => (
     </div>
   </div>
 );
-export default NutrtionButton;
+export default NutritionButton;

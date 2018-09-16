@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
-import RecipePage from './RecipePage';
-import SecondaryHeader from './SecondaryHeader';
+// import RecipePage from './RecipePage';
+// import SecondaryHeader from './SecondaryHeader';
+import NutritionFactsPage from './NutritionFactsPage';
+
 import Footer from './Footer';
+
+const nutrition = {
+  fat: { qty: 8, perc: 10 },
+  cholesterol: { qty: 0, perc: 0 },
+  protein: { qty: 0, perc: null },
+};
 
 const recipe = {
   title: 'Green Smoothie',
@@ -21,8 +29,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <SecondaryHeader />
-        <RecipePage recipe={recipe} />
+        <NutritionFactsPage nutrition={nutrition} />
+        {/* <SecondaryHeader />
+        <RecipePage recipe={recipe} /> */}
         <Footer />
       </div>
     );
