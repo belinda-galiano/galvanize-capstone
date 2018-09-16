@@ -22,17 +22,17 @@ This links to the board in trello.com where I have some of the user stories of t
 
 ### Technologies 
 
-| Front-end: | Back-end:
------------- | -----------
-|- D3.js (new technology for me) |- PostgreSQL
-|- Redux (new technology for me) |- Express 
-|- Sass (new technology for me) |- Heroku
-|- HTML |- Cypress
-|- CSS |- Postman
-|- Google’s Material Design |-Firebase 
-|- JavaScript |
-|- React |
-|- Reach Router |
+| Front-end | Back-end |
+| ------------ | ----------- |
+| D3.js (new technology for me) | PostgreSQL |
+| Redux (new technology for me) | Express |
+| Sass (new technology for me) | Heroku |
+| HTML | Cypress |
+| CSS | Postman |
+| Google’s Material Design | Firebase |
+| JavaScript | |
+| React | |
+| Reach Router | |
 
 | To prototype the application wireframes: | To project-management the workflow in the application:|
 ------- | -------
@@ -44,4 +44,16 @@ This links to the board in trello.com where I have some of the user stories of t
 
 ### Wireframes
 
+![welcome-page.png](https://github.com/belinda-galiano/galvanize-capstone/blob/master/plan_my_meal%20mockup/welcome-page.png)
 
+![homepage.png](https://github.com/belinda-galiano/galvanize-capstone/blob/master/plan_my_meal%20mockup/homepage.png)
+
+![recipes_individual.png](https://github.com/belinda-galiano/galvanize-capstone/blob/master/plan_my_meal%20mockup/recipes_individual.png)
+
+![nutrition Information.png](https://github.com/belinda-galiano/galvanize-capstone/blob/master/plan_my_meal%20mockup/nutrition%20Information.png)
+
+![recipe_create.png](https://github.com/belinda-galiano/galvanize-capstone/blob/master/plan_my_meal%20mockup/recipe_create.png)
+
+![recipe_ingredient_create_1.png](https://github.com/belinda-galiano/galvanize-capstone/blob/master/plan_my_meal%20mockup/recipe_ingredient_create_1.png)
+
+![SignUp_form_mobile.png](https://github.com/belinda-galiano/galvanize-capstone/blob/master/plan_my_meal%20mockup/SignUp_form_mobile.png)
