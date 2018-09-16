@@ -21,14 +21,20 @@ class RecipePage extends Component {
         active: '0h 27min',
         total: '1h 40min',
       },
-      ingredients:[['almond milk', '1cup'],['kale','1cup'],['banana','1'],['almond butter','1 tablespoon']]
+      ingredients: [['almond milk ', '1cup'], ['kale ', '1cup'], ['banana ', '1'], ['almond butter ', '1 tablespoon']],
+      directions: [['Add all ingredients into a high-speed blender and blend until smooth'], ['Enjoy your super healthy smoothie!']],
     };
-    let listIngredient =
-        .map
+
+    const servings = 1;
+    const listIngredient = recipe.ingredients
+      .map(ingredient => <li>{ingredient}</li>);
+    const directions = recipe.directions
+      .map(direction => <li>{direction}</li>);
+
     return (
       <div className="mdc-top-app-bar--fixed-adjust">
         <img src={recipeImg} alt="Green Warrior Protein Smoothie" className="recipe-img" />
-        <div className="row-align icons-align">
+        <div className="row-align flex-justify-content">
           <img src={favoriteIcon} alt="favorite icon" />
           <img src={editIcon} alt="edit icon" />
         </div>
@@ -47,12 +53,25 @@ class RecipePage extends Component {
             {recipe.time.total}
           </p>
         </div>
-        <h3>Ingredients</h3>
-        <ul>
-          
+        <div className="row-align flex-justify-content">
+          <h3>Ingredients</h3>
+          <div className="row-align">
+            <h5>servings</h5>
+            <select name="servings" className="select-menu">
+              <option value="first">{servings}</option>
+              <option value="second" selected>{servings}</option>
+            </select>
+          </div>
+        </div>
+        <ul className="style-list">
+          {listIngredient}
         </ul>
-
-        <div />
+        <div>
+          <h3>Directions</h3>
+          <ul>
+            {directions}
+          </ul>
+        </div>
 
       </div>
     );

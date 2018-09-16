@@ -4,7 +4,7 @@
   /* height: 300px; */
   width: 100%;
 }
-.icons-align{
+.flex-justify-content{
   justify-content: space-around;
 }
 .row-align{
@@ -15,4 +15,10 @@
 }
 .p-tags{
   color:#0D47A1;
+}
+.select-menu{
+  border: 1px solid #000000;
+}
+.style-list{
+  list-style: none;
 }
