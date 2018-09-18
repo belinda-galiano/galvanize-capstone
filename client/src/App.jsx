@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 // import RecipePage from './RecipePage';
-// import SecondaryHeader from './SecondaryHeader';
+import SecondaryHeader from './SecondaryHeader';
 // import NutritionButton from './NutritionButton.jsx';
 // import NutritionFactsPage from './NutritionFactsPage';
 import RecipeForm from './RecipeForm';
@@ -34,9 +34,10 @@ class App extends Component {
   render() {
     return (
       <div>
+        <SecondaryHeader name="Create Recipe" />
         <RecipeForm />
         {/* <NutritionFactsPage nutrition={nutrition} /> */}
-        {/* <SecondaryHeader />
+        {/* <SecondaryHeader name="Recipe"/>
         <NutritionButton />
         <RecipePage recipe={recipe} /> */}
         <Footer />

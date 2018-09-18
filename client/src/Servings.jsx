@@ -1,9 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import './Servings.css';
 
 const Servings = ({ servings }) => (
   <div>
-    <h5>Servings</h5>
+    <h5 className="mdc-typography--subtitle2">Servings</h5>
     <div className="serv-menu-position">
       <div className="mdc-select mdc-select--outlined time-cell">
         <select className="mdc-select__native-control">
@@ -23,3 +25,7 @@ const Servings = ({ servings }) => (
 
 );
 export default Servings;
+
+Servings.propTypes = {
+  servings: PropTypes.number.isRequired,
+};

@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import './RecipePage.css';
 import NutritionButton from './NutritionButton';
 import IngredientsList from './IngredientsList';
@@ -8,7 +10,6 @@ import DirectionsList from './DirectionsList';
 import recipeImg from './Green Warrior Protein Smoothie.png';
 import favoriteIcon from './baseline-favorite_border-24px.svg';
 import editIcon from './baseline-edit-24px.svg';
-import timeIcon from './baseline-timelapse-24px.svg';
 
 const RecipePage = ({ recipe }) => {
   const servings = 1;
@@ -26,7 +27,9 @@ const RecipePage = ({ recipe }) => {
       <h1 className="mdc-typography--headline5 tilte">{recipe.title}</h1>
       <p className="mdc-typography--subtitle2 p-tags">{recipe.tags}</p>
       <div className="row-align">
-        <img src={timeIcon} alt="timelapse icon" />
+        <i className="material-icons">
+timelapse
+        </i>
         <p className="mdc-typography--subtitle1">
           Active
           {' '}
@@ -64,3 +67,7 @@ const RecipePage = ({ recipe }) => {
 };
 
 export default RecipePage;
+
+RecipePage.propTypes = {
+  recipe: PropTypes.object.
+};

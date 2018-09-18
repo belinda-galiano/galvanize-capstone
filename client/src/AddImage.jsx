@@ -1,5 +1,6 @@
 import React from 'react';
-import './AddImage';
+import PropTypes from 'prop-types';
+import './AddImage.css';
 
 const AddImage = ({ name }) => (
   <div className="mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon">
@@ -15,3 +16,7 @@ const AddImage = ({ name }) => (
   </div>
 );
 export default AddImage;
+
+AddImage.propTypes = {
+  name: PropTypes.string.isRequired,
+};

@@ -1,6 +1,5 @@
 import React from 'react';
 import './NutritionButton.css';
-import infoIcon from './baseline-info-24px.svg';
 
 
 const NutritionButton = () => (
