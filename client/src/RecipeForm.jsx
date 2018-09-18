@@ -11,9 +11,9 @@ class RecipeForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'Title',
-      active: 23,
-      total: [1, 20],
+      // name: '',
+      // active: 23,
+      // total: [1, 20],
       servings: 4,
       ingredient: 'garlic',
       ingredQty: 12,
@@ -29,7 +29,7 @@ class RecipeForm extends Component {
 
   render() {
     const {
-      name, active, total, servings, ingredient, ingredQty,
+      servings, ingredient, ingredQty,
     } = this.state;
     return (
       <div className="form-container">

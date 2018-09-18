@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './TextField.css';
 
 const TextField = ({ name }) => (
@@ -14,3 +15,7 @@ const TextField = ({ name }) => (
   </div>
 );
 export default TextField;
+
+TextField.propTypes = {
+  name: PropTypes.string.isRequired,
+};
