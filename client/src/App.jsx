@@ -2,14 +2,19 @@ import React, { Component } from 'react';
 import './App.css';
 // import RecipePage from './RecipePage';
 // import SecondaryHeader from './SecondaryHeader';
-import NutritionFactsPage from './NutritionFactsPage';
+// import NutritionButton from './NutritionButton.jsx';
+// import NutritionFactsPage from './NutritionFactsPage';
+import RecipeForm from './RecipeForm';
 
 import Footer from './Footer';
+
 
 const nutrition = {
   fat: { qty: 8, perc: 10 },
   cholesterol: { qty: 0, perc: 0 },
   protein: { qty: 0, perc: null },
+  'vitamin D': { qty: 5, perc: 25 },
+  'vitamin C': { qty: 20, perc: 2 },
 };
 
 const recipe = {
@@ -29,8 +34,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <NutritionFactsPage nutrition={nutrition} />
+        <RecipeForm />
+        {/* <NutritionFactsPage nutrition={nutrition} /> */}
         {/* <SecondaryHeader />
+        <NutritionButton />
         <RecipePage recipe={recipe} /> */}
         <Footer />
       </div>

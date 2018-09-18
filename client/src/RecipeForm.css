@@ -1,0 +1,14 @@
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content:start;
+  overflow: hidden;
+  padding: 8px;
+}
+
+.form-el-margin{
+  margin: 8px 0px;
+}
+

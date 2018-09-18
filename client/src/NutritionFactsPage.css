@@ -1,6 +1,23 @@
-.divider-line { width:100%; 
-  height:1px; 
-  background: #DEDEDE }
-  .top-botton-margin-8{
-    margin: 8px 0px;
-  }
+
+.nutrition-table {
+  width: 100%;
+  line-height: 1.5; }
+  .nutrition-table td:first-child {
+    width: 75%;
+    border-bottom: 1px solid #558B2F; }
+  .nutrition-table td:nth-child(2) {
+    border-bottom: 1px solid #558B2F; }
+
+.nutrition-table-border {
+  border-bottom: 1px solid green; }
+
+.qty {
+  padding-left: 24px; }
+
+.bold-fonts {
+  font-weight: bold; }
+
+/* .main-divider-line { 
+  height:3px; 
+  background: #558B2F 
+} */

@@ -1,0 +1,37 @@
+$primary-color: #558B2F;
+$body-padding: 8px;
+
+.table-body{
+  padding: $body-padding;
+}
+.nutrition-table {
+  width: 100%;
+  line-height: 1.5;
+
+  td:first-child {
+    width: 75%;
+    border-bottom: 1px solid $primary-color
+  }
+  
+  td:nth-child(2) {
+    border-bottom: 1px solid $primary-color
+  }
+
+}
+
+.nutrition-table-border {
+  border-bottom: 1px solid green;
+}
+
+.qty{
+  padding-left: 24px;
+}
+
+.bold-fonts{
+  font-weight: bold;
+}
+
+/* .main-divider-line { 
+  height:3px; 
+  background: #558B2F 
+} */
