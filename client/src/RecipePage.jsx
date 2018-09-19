@@ -67,7 +67,3 @@ timelapse
 };
 
 export default RecipePage;
-
-RecipePage.propTypes = {
-  recipe: PropTypes.object.
-};

@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import './Textarea.css';
 
 const Textarea = ({ name }) => (
-  <div className="mdc-text-field mdc-text-field--outlined el-style">
-
+  <div className="mdc-text-field--textarea mdc-text-field--outlined  el-style">
     <input type="text" id="tf-outlined" className="mdc-text-field__input" />
     <label htmlFor="tf-outlined" className="mdc-floating-label">{name}</label>
     <div className="mdc-notched-outline">

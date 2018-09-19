@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
+import { Router } from '@reach/router';
 import './App.css';
-// import RecipePage from './RecipePage';
-import SecondaryHeader from './SecondaryHeader';
-// import NutritionButton from './NutritionButton.jsx';
-// import NutritionFactsPage from './NutritionFactsPage';
+import RecipePage from './RecipePage';
+import NutritionFactsPage from './NutritionFactsPage';
 import RecipeForm from './RecipeForm';
-
-import Footer from './Footer';
-
+import IngredientForm from './IngredientForm';
+import DirectionsForm from './DirectionsForm';
+import HomePage from './HomePage';
 
 const nutrition = {
   fat: { qty: 8, perc: 10 },
@@ -34,13 +33,14 @@ class App extends Component {
   render() {
     return (
       <div>
-        <SecondaryHeader name="Create Recipe" />
-        <RecipeForm />
-        {/* <NutritionFactsPage nutrition={nutrition} /> */}
-        {/* <SecondaryHeader name="Recipe"/>
-        <NutritionButton />
-        <RecipePage recipe={recipe} /> */}
-        <Footer />
+        <Router>
+          <HomePage path="/" />
+          <DirectionsForm path="/directions-form" />
+          <IngredientForm path="/ingredient-form" />
+          <RecipeForm path="/recipe-form" />
+          <NutritionFactsPage path="/nutrition-facts" nutrition={nutrition} />
+          <RecipePage path="/recipe" recipe={recipe} />
+        </Router>
       </div>
     );
   }

@@ -1,19 +1,22 @@
-.mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
-  color: var(--mdc-primary-theme, green); }
-
 .form-container {
   display: flex;
   flex-direction: column;
   margin-top: 16px;
   padding: 4px 8px; }
 
-.align-right {
+.units-cell {
+  width: 72px;
+  margin: 8px 8px; }
+
+.quantity-units-align {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start; }
+
+.align-rigth {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
   margin-bottom: 8px; }
-
-.highlight-line {
-  background-color: #FAFAFA;
-  padding: 4px 4px; }

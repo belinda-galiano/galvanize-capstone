@@ -18,6 +18,8 @@ html, body, .flex-body, #root {
 body {
   margin: 0px;
   padding: 0px;
+  --mdc-theme-primary: #558B2F;
+  --mdc-theme-secondary: #E91E63; 
 }
 .primary-color{
   color: #558B2F;

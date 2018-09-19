@@ -57,11 +57,10 @@ class RecipeForm extends Component {
             Preheat the oven to 375F (190C).
             </p>
           </div>
-          <Textarea name="Next step" />
           <AddBtn name="Add Direction" />
           <h5 className="mdc-typography--subtitle2">Notes</h5>
-          <Textarea name="Notes" />
-          <div className="align-rigth">
+          {/* <Textarea name="Notes" /> */}
+          <div className="align-right">
             <SaveBtn name="Save" />
           </div>
         </div>
