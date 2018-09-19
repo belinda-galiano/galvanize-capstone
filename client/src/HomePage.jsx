@@ -12,9 +12,8 @@ const HomePage = () => (
         <div className="search-align">
           <Search />
         </div>
-
+        <RecipeCard />
       </div>
-      <RecipeCard />
     </div>
   </div>
 );
