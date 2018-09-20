@@ -8,7 +8,6 @@ import IngredientListEdit from './IngredientListEdit';
 import BtnAdd from './BtnAdd';
 import TextField from './TextField';
 import AddImage from './AddImage';
-import Textarea from './Textarea';
 import BtnSave from './BtnSave';
 
 class RecipeForm extends Component {

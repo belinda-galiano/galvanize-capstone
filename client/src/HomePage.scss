@@ -24,3 +24,23 @@
 .mdc-button--unelevated:not(:disabled) {
   background-color: #e91e63;
 }
+.headline6-align{
+  width: 100%;
+  padding-left: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  .headline6-style{
+    color: #558B2F;
+    margin: 8px 0px;
+  }
+}
+
+.see-allbtn-align{
+  width: 100%;
+  padding-right: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 8px 0px;
+}

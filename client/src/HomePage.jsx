@@ -13,11 +13,13 @@ const HomePage = ({ recipes }) => (
           <Search />
         </div>
         <div className="divider-line" />
-        <h6 className="mdc-typography--subtitle1">Recipes</h6>
-        <button className="mdc-button btn-align">
+        <div className="headline6-align">
+          <h6 className="mdc-typography--headline6 headline6-style">Recipes</h6>
+        </div>
+        { recipes.map(recipe => <RecipeCard {...recipe} key={recipe.title} />)}
+        <button className="mdc-button see-allbtn-align">
             See all
         </button>
-        { recipes.map(recipe => <RecipeCard {...recipe} />)}
         <div className="divider-line" />
         <button className="mdc-button mdc-button--outlined mdc-elevation--z2 mdc-typography--button">
         CREATE RECIPE

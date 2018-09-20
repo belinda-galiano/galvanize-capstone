@@ -20,13 +20,13 @@ class App extends Component {
       <div>
         <Router>
           <HomePage path="/" recipes={recipes} />
-          <DirectionsForm path="/directions-form" />
-          <IngredientForm path="/ingredient-form" />
-          <IngredientListEdit path="/ingredient-input" />
-          <IngredientsList path="/ingredient-list" ingredients={recipes[0].ingredients} />
-          <RecipeForm path="/recipe-form" />
-          <NutritionFactsPage path="/nutrition-facts" nutrition={nutrition} />
           <RecipePage path="/recipe" recipe={recipes[0]} />
+          <IngredientsList path="/ingredient-list" ingredients={recipes[0].ingredients} />
+          <NutritionFactsPage path="/nutrition-facts" nutrition={nutrition} />
+          <RecipeForm path="/recipe-form" />
+          <IngredientListEdit path="/ingredient-input" key={recipes[0].ingredients} />
+          <IngredientForm path="/ingredient-form" />
+          <DirectionsForm path="/directions-form" />
         </Router>
       </div>
     );

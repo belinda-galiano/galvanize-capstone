@@ -34,7 +34,7 @@ export const recipes = [{
     { food: 'sea salt ', qty: '', notes: '' }, { food: 'black pepper ', qty: '', notes: 'freshly ground' },
     { food: 'can white beans ', qty: '1 15-oz (425g)', notes: 'such as cannelloni or great northern, rinsed' },
     { food: 'garlic', qty: '1 clove', notes: 'peeled' },
-    { food: 'lemon juice', qty: '1 tablespoon', notes: 'fresh' },
+    { food: 'lemon juice', qty: '1 tablespoon', notes: '' },
     { food: 'Celery stalks', qty: '', notes: 'for serving' },
     { food: 'pita chips', qty: '', notes: 'for serving' },
   ],
@@ -52,16 +52,31 @@ export const recipes = [{
 },
 {
   title: 'Roasted Beet Hummus with Hazelnut Oil & Rosemary',
-  image: '',
-  tags: [''],
+  image: '/Roasted-Beet-Hummus.png',
+  tags: ['#beans', '#beet', 'tahini'],
   time: {
-    active: [0, 4],
-    total: [0, 24],
+    active: [0, 10],
+    total: [0, 10],
   },
-  servings: 4,
-  ingredients: [{}],
-  directions: [''],
-  notes: [''],
+  servings: 6,
+  ingredients: [
+    { food: 'can cannelinni beans', qty: '1 15 oz', notes: 'Great Northern would work as well, drained and rinsed' },
+    { food: 'red beet', qty: '1 small', notes: 'roasted and cut into small pieces' },
+    { food: 'tahini', qty: '1/4 cup', notes: '' },
+    { food: 'maple syrup', qty: '1/2 tsp', notes: '' },
+    { food: 'salt', qty: '', notes: '' },
+    { food: 'pepper', qty: '', notes: '' },
+    { food: 'olive oil', qty: '1 Tbsp', notes: '' },
+    { food: 'hazelnut oil', qty: '1 tsp', notes: '' },
+    { food: 'rosemary', qty: '1 spring', notes: 'finely chopped' },
+  ],
+  directions: [
+    'Using a food processor fitted with an S-blade, combine beans, beet pieces, tahini, maple syrup, lemon juice, salt, and pepper and process until completely smooth, 3 to 5 minutes. Season with more salt, if needed.',
+    'Transfer to a serving bowl, drizzle olive oil and hazelnut over it and then sprinkle with rosemary. Serve with fresh bread, crackers, or veggies.'],
+  notes: [
+    'This Roasted Beet Hummus with Hazelnut Oil & Rosemary recipe is a bright snack worthy of serving to guests but simple enough to enjoy with weekday meals.',
+    'Taken from https://www.vegetarianventures.com/roasted-beet-hummus-with-hazelnut-oil-rosemary/',
+  ],
 
 },
 ];

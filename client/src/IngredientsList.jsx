@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const IngredientsList = ({ ingredients }) => {
   const list = ingredients
@@ -29,3 +30,7 @@ mg
 };
 
 export default IngredientsList;
+
+IngredientsList.propTypes = {
+  ingredients: PropTypes.string.isRequired,
+};
