@@ -13,6 +13,12 @@ import IngredientsList from './IngredientsList';
 
 import { recipes, nutrition } from './data';
 
+const RecipeTemporary = ({ id }) => {
+  const recipe = recipes.filter(recipe => recipe.id == id).pop();
+
+  return <RecipePage recipe={recipe} />;
+};
+
 
 class App extends Component {
   render() {
@@ -20,9 +26,9 @@ class App extends Component {
       <div>
         <Router>
           <HomePage path="/" recipes={recipes} />
-          <RecipePage path="/recipe" recipe={recipes[0]} />
+          <RecipeTemporary path="/recipe/:id" />
           <IngredientsList path="/ingredient-list" ingredients={recipes[0].ingredients} />
-          <NutritionFactsPage path="/nutrition-facts" nutrition={nutrition} />
+          <NutritionFactsPage path="/nutrition-facts/:id" nutrition={nutrition} />
           <RecipeForm path="/recipe-form" />
           <IngredientListEdit path="/ingredient-input" key={recipes[0].ingredients} />
           <IngredientForm path="/ingredient-form" />

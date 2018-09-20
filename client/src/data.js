@@ -7,6 +7,7 @@ export const nutrition = {
 };
 
 export const recipes = [{
+  id: 1,
   image: '/Green-Warrior-Protein-Smoothie.png',
   title: 'Green Smoothie',
   tags: ['#Vegan', ' #gluten-free', '#grain-free', '#no bake/raw', '#oil-free', '#refined sugar-free', '#soy-free'],
@@ -20,6 +21,7 @@ export const recipes = [{
   notes: ['Taken from https://ohsheglows.com/2011/01/13/classic-green-monster/'],
 },
 {
+  id: 2,
   title: 'Roasted Carrot and White Bean Dip',
   image: '/Roasted-Carrot-and-White-Bean-Dip.png',
   tags: ['#Vegan', ' #gluten-free', '#carrots', '#refined sugar-free', '#soy-free'],
@@ -51,6 +53,7 @@ export const recipes = [{
   notes: ['Taken from https://willfrolicforfood.com/2017/07/roasted-carrot-and-white-bean-dip-from-vegetarian-heartland.html'],
 },
 {
+  id: 3,
   title: 'Roasted Beet Hummus with Hazelnut Oil & Rosemary',
   image: '/Roasted-Beet-Hummus.png',
   tags: ['#beans', '#beet', 'tahini'],

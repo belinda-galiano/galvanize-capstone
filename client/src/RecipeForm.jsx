@@ -9,6 +9,7 @@ import BtnAdd from './BtnAdd';
 import TextField from './TextField';
 import AddImage from './AddImage';
 import BtnSave from './BtnSave';
+import SecondaryHeader from './SecondaryHeader';
 
 class RecipeForm extends Component {
   constructor(props) {
@@ -35,32 +36,34 @@ class RecipeForm extends Component {
       servings, ingredient, ingredQty,
     } = this.state;
     return (
-      <div className="mdc-top-app-bar--fixed-adjust">
-        <div className="form-container">
-          <TextField name="Title" className="" />
-          <TextField name="Add link or source website" />
-          <AddImage name="Add image" />
-          <TextField name="Tags" />
-          <h5 className="mdc-typography--subtitle2">Time</h5>
-          <TimeInput name="Active" />
-          <TimeInput name="Total" />
-          <Servings servings={servings} />
-          <h5 className="mdc-typography--subtitle2">Ingredients</h5>
-          <IngredientListEdit ingredient={ingredient} ingredQty={ingredQty} />
-          <IngredientListEdit ingredient={ingredient} ingredQty={ingredQty} />
-          <Link to="/IngredientForm"><BtnAdd name="Add ingredient" /></Link>
-          <h5 className="mdc-typography--subtitle2">Directions</h5>
-          <p className="mdc-typography--body2 highlight-line">We recomend write the directions by steps</p>
-          <div className="el-style">
-            <p className="mdc-typography--body1">
-              <span>1. </span>
+      <div>
+        <SecondaryHeader />
+        <div className="mdc-top-app-bar--fixed-adjust">
+          <div className="form-container">
+            <TextField name="Title" className="" />
+            <AddImage name="Add image" />
+            <TextField name="Tags" />
+            <h5 className="mdc-typography--subtitle2">Time</h5>
+            <TimeInput name="Active" />
+            <TimeInput name="Total" />
+            <Servings servings={servings} />
+            <h5 className="mdc-typography--subtitle2">Ingredients</h5>
+            <IngredientListEdit ingredient={ingredient} ingredQty={ingredQty} />
+            <IngredientListEdit ingredient={ingredient} ingredQty={ingredQty} />
+            <Link to="/IngredientForm"><BtnAdd name="Add ingredient" /></Link>
+            <h5 className="mdc-typography--subtitle2">Directions</h5>
+            <p className="mdc-typography--body2 highlight-line">We recomend write the directions by steps</p>
+            <div className="el-style">
+              <p className="mdc-typography--body1">
+                <span>1. </span>
             Preheat the oven to 375F (190C).
-            </p>
-          </div>
-          <BtnAdd name="Add Direction" />
-          <h5 className="mdc-typography--subtitle2">Notes</h5>
-          <div className="align-right">
-            <BtnSave name="Save" />
+              </p>
+            </div>
+            <BtnAdd name="Add Direction" />
+            <h5 className="mdc-typography--subtitle2">Notes</h5>
+            <div className="align-right">
+              <BtnSave name="Save" />
+            </div>
           </div>
         </div>
       </div>

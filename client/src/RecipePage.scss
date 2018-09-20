@@ -1,0 +1,34 @@
+$primary-color:#558B2F;
+$tags-color: #0D47A1;
+
+.recipe-img{
+  max-height: 300%;
+}
+.recipe-page-container{
+  padding: 8px;
+}
+.space-between-align{
+  justify-content:space-between;
+}
+.row-align{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.tilte{
+  color: $primary-color;
+  margin: 16px 0px;
+}
+.p-tags{
+  color:$tags-color;
+}
+
+.divider-line { width:100%; 
+  height:1px; 
+  background: #DEDEDE }
+  .top-botton-margin-8{
+    margin: 8px 0px;
+  }
+  .serving-cell{
+    height: 44px;
+  }

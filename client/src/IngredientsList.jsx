@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './IngredientsList.css';
 
 const IngredientsList = ({ ingredients }) => {
   const list = ingredients
     .map(ingredient => (
       <div>
-        <li className="mdc-list-item mdc-list-item__meta">
+        <li className="mdc-list-item">
           <span className="mdc-list-item__text">
             <span className="mdc-list-item__primary-text mdc-typography--body1">
               {ingredient.food}
@@ -16,7 +17,6 @@ mg
             <span className="mdc-list-item__secondary-text mdc-typography--body2">{ingredient.notes}</span>
           </span>
         </li>
-        <li role="separator" className="mdc-list-divider" />
       </div>
     ));
 
