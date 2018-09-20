@@ -1,7 +1,7 @@
 import React from 'react';
-import './AddBtn.css';
+import './BtnAdd.css';
 
-const AddBtn = ({ name }) => (
+const BtnAdd = ({ name }) => (
   <div className="left-align">
     <button className="mdc-button mdc-button--unelevated btn-style mdc-typography--button">
       <i className="material-icons mdc-button__icon" aria-hidden="true">add</i>
@@ -9,4 +9,4 @@ const AddBtn = ({ name }) => (
     </button>
   </div>
 );
-export default AddBtn;
+export default BtnAdd;

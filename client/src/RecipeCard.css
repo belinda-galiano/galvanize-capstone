@@ -1,5 +1,8 @@
 .my-card {
-  background: top/contain no-repeat url("./Green Warrior Protein Smoothie.png"), #fafafa 35%/25%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-color: #fafafa;
+  background-size: contain;
   height: 350px;
   width: 350px;
   border-radius: 2px;

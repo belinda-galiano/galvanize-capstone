@@ -3,7 +3,7 @@ import './IngredientForm.css';
 
 import SecondaryHeader from './SecondaryHeader';
 import TextField from './TextField';
-import SaveBtn from './SaveBtn';
+import BtnSave from './BtnSave';
 
 
 const IngredientForm = () => (
@@ -42,7 +42,7 @@ const IngredientForm = () => (
         <TextField name="Ingredient" />
         <TextField name="notes" />
         <div className="align-rigth">
-          <SaveBtn name="Done" />
+          <BtnSave name="Done" />
         </div>
       </div>
     </div>

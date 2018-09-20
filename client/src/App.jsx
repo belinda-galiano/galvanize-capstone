@@ -16,7 +16,7 @@ const nutrition = {
   'vitamin C': { qty: 20, perc: 2 },
 };
 
-const recipe = {
+const recipes = [{
   title: 'Green Smoothie',
   tags: ['#Vegan', ' #gluten-free', '#grain-free', '#no bake/raw', '#oil-free', '#refined sugar-free', '#soy-free'],
   time: {
@@ -24,22 +24,33 @@ const recipe = {
     total: '1h 40min',
   },
   ingredients: [{ food: 'almond milk ', quantity: '1cup', notes: 'or other non-dairy milk' }, { food: 'kale ', quantity: '1cup', notes: 'or baby spinach' }, { food: 'banana ', quantity: '1' }, { food: 'almond butter ', quantity: '1 tablespoon' }],
-
   directions: [['Add all ingredients into a high-speed blender and blend until smooth'], ['Enjoy your super healthy smoothie!']],
-
-};
+  image: '/Green-Warrior-Protein-Smoothie.png',
+},
+{
+  title: 'Another Recipe',
+  tags: ['#Vegan', ' #gluten-free', '#grain-free', '#no bake/raw', '#oil-free', '#refined sugar-free', '#soy-free'],
+  time: {
+    active: '0h 27min',
+    total: '1h 40min',
+  },
+  ingredients: [{ food: 'almond milk ', quantity: '1cup', notes: 'or other non-dairy milk' }, { food: 'kale ', quantity: '1cup', notes: 'or baby spinach' }, { food: 'banana ', quantity: '1' }, { food: 'almond butter ', quantity: '1 tablespoon' }],
+  directions: [['Add all ingredients into a high-speed blender and blend until smooth'], ['Enjoy your super healthy smoothie!']],
+  image: '',
+},
+];
 
 class App extends Component {
   render() {
     return (
       <div>
         <Router>
-          <HomePage path="/" />
+          <HomePage path="/" recipes={recipes} />
           <DirectionsForm path="/directions-form" />
           <IngredientForm path="/ingredient-form" />
           <RecipeForm path="/recipe-form" />
           <NutritionFactsPage path="/nutrition-facts" nutrition={nutrition} />
-          <RecipePage path="/recipe" recipe={recipe} />
+          <RecipePage path="/recipe" recipe={recipes[0]} />
         </Router>
       </div>
     );

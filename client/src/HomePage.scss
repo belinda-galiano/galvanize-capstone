@@ -12,12 +12,15 @@
     align-items: center;
     justify-content: center; 
 
-    .subtitle-align{
-      width: 100%;
+  }
 }
+.divider-line { 
+  width:100%; 
+  height:1px; 
+  background: #DEDEDE;
+  margin: 16px 0px; 
 }
-}
-.btn-align{
-  width: 100px;
-  text-align: right;
+
+.mdc-button--unelevated:not(:disabled) {
+  background-color: #e91e63;
 }

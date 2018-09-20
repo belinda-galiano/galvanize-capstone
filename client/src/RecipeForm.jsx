@@ -4,11 +4,11 @@ import './RecipeForm.css';
 import TimeInput from './TimeInput';
 import Servings from './Servings';
 import IngredientsInput from './IngredientsInput';
-import AddBtn from './AddBtn';
+import BtnAdd from './BtnAdd';
 import TextField from './TextField';
 import AddImage from './AddImage';
 import Textarea from './Textarea';
-import SaveBtn from './SaveBtn';
+import BtnSave from './BtnSave';
 
 class RecipeForm extends Component {
   constructor(props) {
@@ -48,7 +48,7 @@ class RecipeForm extends Component {
           <h5 className="mdc-typography--subtitle2">Ingredients</h5>
           <IngredientsInput ingredient={ingredient} ingredQty={ingredQty} />
           <IngredientsInput ingredient={ingredient} ingredQty={ingredQty} />
-          <AddBtn name="Add recipe" />
+          <BtnAdd name="Add recipe" />
           <h5 className="mdc-typography--subtitle2">Directions</h5>
           <p className="mdc-typography--body2 highlight-line">We recomend write the directions by steps</p>
           <div className="el-style">
@@ -57,11 +57,11 @@ class RecipeForm extends Component {
             Preheat the oven to 375F (190C).
             </p>
           </div>
-          <AddBtn name="Add Direction" />
+          <BtnAdd name="Add Direction" />
           <h5 className="mdc-typography--subtitle2">Notes</h5>
           {/* <Textarea name="Notes" /> */}
           <div className="align-right">
-            <SaveBtn name="Save" />
+            <BtnSave name="Save" />
           </div>
         </div>
       </div>

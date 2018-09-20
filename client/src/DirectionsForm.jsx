@@ -3,7 +3,7 @@ import './DirectionsForm.css';
 
 import SecondaryHeader from './SecondaryHeader';
 import Textarea from './Textarea';
-import SaveBtn from './SaveBtn';
+import BtnSave from './BtnSave';
 
 const DirectionsForm = () => (
   <div>
@@ -13,7 +13,7 @@ const DirectionsForm = () => (
         <p className="mdc-typography--body2 highlight-line">We recomend write the directions by steps</p>
         <Textarea name="Next step" />
         <div className="align-rigth">
-          <SaveBtn name="Done" />
+          <BtnSave name="Done" />
         </div>
       </div>
     </div>

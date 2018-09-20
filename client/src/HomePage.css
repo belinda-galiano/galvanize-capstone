@@ -10,9 +10,12 @@
     flex-direction: row;
     align-items: center;
     justify-content: center; }
-    .homepage-container .search-align .subtitle-align {
-      width: 100%; }
 
-.btn-align {
-  width: 100px;
-  text-align: right; }
+.divider-line {
+  width: 100%;
+  height: 1px;
+  background: #DEDEDE;
+  margin: 16px 0px; }
+
+.mdc-button--unelevated:not(:disabled) {
+  background-color: #e91e63; }

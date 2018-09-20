@@ -7,7 +7,7 @@ const Servings = ({ servings }) => (
   <div>
     <h5 className="mdc-typography--subtitle2">Servings</h5>
     <div className="serv-menu-position">
-      <div className="mdc-select mdc-select--outlined time-cell">
+      <div className="mdc-select mdc-select--outlined serving-cell">
         <select className="mdc-select__native-control">
    ...
         </select>

@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './SaveBtn.css';
+import './BtnSave.css';
 
-const SaveBtn = ({ name }) => (
+const BtnSave = ({ name }) => (
   <div>
     <button className="mdc-button mdc-button--raised btn-color mdc-typography--button">
       {name}
     </button>
   </div>
 );
-export default SaveBtn;
+export default BtnSave;
 
-SaveBtn.propTypes = {
+BtnSave.propTypes = {
   name: PropTypes.string.isRequired,
 };
