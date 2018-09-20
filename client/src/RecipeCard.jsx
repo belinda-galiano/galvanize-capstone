@@ -24,5 +24,8 @@ favorite_border
 export default RecipeCard;
 
 RecipeCard.propTypes = {
-  name: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  tags: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+
 };
