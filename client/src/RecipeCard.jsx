@@ -7,16 +7,17 @@ const RecipeCard = ({ title, tags, image }) => (
   <div>
     <div className="my-card mdc-elevation--z2" style={image ? { backgroundImage: `url(${image})` } : null}>
       <div className="text-card">
-        <h6 className="mdc-typography--body1">{title}</h6>
-        <p className="mdc-typography--body2 text-tags">
-          { tags.map(t => (
-            <span style={{ marginLeft: '10px' }}>{t}</span>
-          )) }
-
-        </p>
-        <i className="material-icons icon-size">
+        <div className="text-padding">
+          <h6 className="mdc-typography--headline6">{title}</h6>
+          <p className="mdc-typography--body2 text-tags">
+            { tags.map(t => (
+              <span style={{ marginLeft: '8px' }}>{t}</span>
+            )) }
+          </p>
+          <i className="material-icons icon-size">
 favorite_border
-        </i>
+          </i>
+        </div>
       </div>
     </div>
   </div>

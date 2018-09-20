@@ -5,23 +5,25 @@
   background-size: contain;
   height: 350px;
   width: 350px;
-  border-radius: 2px;
-  padding: 4px;
+  border-radius: 3px;
   margin-top: 8px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end; }
   .my-card .text-card {
+    background: rgba(0, 0, 0, 0.7);
     display: flex;
     flex-direction: column;
-    padding: 4px;
     align-content: center;
     justify-content: flex-start; }
-    .my-card .text-card h6 {
-      margin: 1px; }
-      .my-card .text-card h6 .text-tags {
+    .my-card .text-card .text-padding {
+      padding: 16px 16px 8px 16px;
+      color: #fff; }
+      .my-card .text-card .text-padding h6 {
         margin: 1px; }
-        .my-card .text-card h6 .text-tags .icon-size {
-          height: 24px;
-          width: 24px;
-          margin: 2px; }
+        .my-card .text-card .text-padding h6 .text-tags {
+          margin: 1px; }
+          .my-card .text-card .text-padding h6 .text-tags .icon-size {
+            height: 24px;
+            width: 24px;
+            margin: 2px; }
