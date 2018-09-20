@@ -12,7 +12,7 @@ const DirectionsForm = () => (
       <div className="form-container">
         <p className="mdc-typography--body2 highlight-line">We recomend write the directions by steps</p>
         <Textarea name="Next step" />
-        <div className="align-rigth">
+        <div className="align-right">
           <BtnSave name="Done" />
         </div>
       </div>

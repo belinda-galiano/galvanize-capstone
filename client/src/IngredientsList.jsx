@@ -3,21 +3,28 @@ import React from 'react';
 const IngredientsList = ({ ingredients }) => {
   const list = ingredients
     .map(ingredient => (
-      <li className="mdc-list-item">
-        <span className="mdc-list-item__text">
-          <span className="mdc-list-item__primary-text">
-            {ingredient.food}
-            {ingredient.quantity}
+      <div>
+        <li className="mdc-list-item mdc-list-item__meta">
+          <span className="mdc-list-item__text">
+            <span className="mdc-list-item__primary-text mdc-typography--body1">
+              {ingredient.food}
+              {''}
+              {ingredient.qty}
+mg
+            </span>
+            <span className="mdc-list-item__secondary-text mdc-typography--body2">{ingredient.notes}</span>
           </span>
-          <span className="mdc-list-item__secondary-text">{ingredient.notes}</span>
-        </span>
-      </li>
+        </li>
+        <li role="separator" className="mdc-list-divider" />
+      </div>
     ));
 
   return (
-    <ul className="mdc-list mdc-list--two-line style-list" aria-orientation="vertical">
-      {list}
-    </ul>
+    <div>
+      <ul className="mdc-list mdc-list--two-line">
+        {list}
+      </ul>
+    </div>
   );
 };
 

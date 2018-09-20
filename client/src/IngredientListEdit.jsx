@@ -1,7 +1,7 @@
 import React from 'react';
-import './IngredientsInput.css';
+import './IngredientListEdit.css';
 
-const IngredientsInput = ({ ingredient, ingredQty }) => (
+const IngredientListEdit = ({ ingredient, ingredQty }) => (
   <div>
     <ul className="mdc-list mdc-list--two-line" aria-orientation="vertical">
       <li className="mdc-list-item mdc-list-item__meta">
@@ -21,4 +21,4 @@ mg
   </div>
 );
 
-export default IngredientsInput;
+export default IngredientListEdit;

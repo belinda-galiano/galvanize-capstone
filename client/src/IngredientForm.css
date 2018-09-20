@@ -8,13 +8,13 @@
   width: 72px;
   margin: 8px 8px; }
 
-.quantity-units-align {
+.qty-units-align {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start; }
 
-.align-rigth {
+.align-right {
   display: flex;
   flex-direction: row;
   align-items: center;

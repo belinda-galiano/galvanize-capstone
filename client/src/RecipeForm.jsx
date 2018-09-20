@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import { Link } from '@reach/router';
 import './RecipeForm.css';
 
 import TimeInput from './TimeInput';
 import Servings from './Servings';
-import IngredientsInput from './IngredientsInput';
+import IngredientListEdit from './IngredientListEdit';
 import BtnAdd from './BtnAdd';
 import TextField from './TextField';
 import AddImage from './AddImage';
@@ -46,9 +47,9 @@ class RecipeForm extends Component {
           <TimeInput name="Total" />
           <Servings servings={servings} />
           <h5 className="mdc-typography--subtitle2">Ingredients</h5>
-          <IngredientsInput ingredient={ingredient} ingredQty={ingredQty} />
-          <IngredientsInput ingredient={ingredient} ingredQty={ingredQty} />
-          <BtnAdd name="Add recipe" />
+          <IngredientListEdit ingredient={ingredient} ingredQty={ingredQty} />
+          <IngredientListEdit ingredient={ingredient} ingredQty={ingredQty} />
+          <Link to="/IngredientForm"><BtnAdd name="Add ingredient" /></Link>
           <h5 className="mdc-typography--subtitle2">Directions</h5>
           <p className="mdc-typography--body2 highlight-line">We recomend write the directions by steps</p>
           <div className="el-style">
@@ -59,7 +60,6 @@ class RecipeForm extends Component {
           </div>
           <BtnAdd name="Add Direction" />
           <h5 className="mdc-typography--subtitle2">Notes</h5>
-          {/* <Textarea name="Notes" /> */}
           <div className="align-right">
             <BtnSave name="Save" />
           </div>

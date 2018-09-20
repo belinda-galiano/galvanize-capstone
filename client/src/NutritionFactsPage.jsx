@@ -12,7 +12,7 @@ const NutritionFactsPage = ({ nutrition }) => (
         </tr>
         <tr>
           <td className="bold-fonts">Serving size</td>
-          <td className="content-rigth ">
+          <td className="content-right ">
             1cup
             <span>(140gr)</span>
           </td>

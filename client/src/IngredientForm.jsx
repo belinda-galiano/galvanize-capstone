@@ -11,7 +11,7 @@ const IngredientForm = () => (
     <SecondaryHeader />
     <div className="mdc-top-app-bar--fixed-adjust">
       <div className="form-container">
-        <div className="quantity-units-align">
+        <div className="qty-units-align">
           <div className="mdc-text-field mdc-text-field--outlined">
             <input type="text" id="td-outlined" className="mdc-text-field__input" />
             <label htmlFor="tf-outlined" className="mdc-floating-label">
@@ -24,7 +24,7 @@ const IngredientForm = () => (
             </div>
             <div className="mdc-notched-outline__idle" />
           </div>
-          <div className="quantity-units-align">
+          <div className="qty-units-align">
             <div className="mdc-select mdc-select--outlined units-cell">
               <select className="mdc-select__native-control">
             ...
@@ -41,7 +41,7 @@ const IngredientForm = () => (
         </div>
         <TextField name="Ingredient" />
         <TextField name="notes" />
-        <div className="align-rigth">
+        <div className="align-right">
           <BtnSave name="Done" />
         </div>
       </div>
