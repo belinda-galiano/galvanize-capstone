@@ -1,10 +1,23 @@
 .homepage-container {
-  margin-top: 16px;
-  overflow: hidden;
-}
-.search-align{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center; 
   align-items: center;
-  justify-content: center;
+  margin-top: 16px;
+  overflow: hidden; 
+
+  .search-align {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+
+    .subtitle-align{
+      width: 100%;
+}
+}
+}
+.btn-align{
+  width: 100px;
+  text-align: right;
 }

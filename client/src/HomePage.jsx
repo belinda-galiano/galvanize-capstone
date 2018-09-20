@@ -7,12 +7,26 @@ import RecipeCard from './RecipeCard';
 
 const HomePage = () => (
   <div>
-    <div className="mdc-top-app-bar--fixed">
-      <div className="homepage-container">
-        <div className="search-align">
-          <Search />
+    <div className="homepage-container">
+      <div className="mdc-top-app-bar--fixed">
+        <div className="homepage-container">
+          <div className="search-align">
+            <Search />
+          </div>
+          <div className="subtitle-align">
+            <h6 className="mdc-typography--subtitle1">Recipes</h6>
+          </div>
+          <div className="btn-align">
+            <button className="mdc-button">
+            See all
+            </button>
+          </div>
+          <RecipeCard name="1 recipe" />
+          <RecipeCard name="1 recipe" />
+          <RecipeCard name="1 recipe" />
+          <RecipeCard name="1 recipe" />
+
         </div>
-        <RecipeCard />
       </div>
     </div>
   </div>

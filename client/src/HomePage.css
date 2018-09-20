@@ -1,9 +1,18 @@
 .homepage-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 16px;
   overflow: hidden; }
+  .homepage-container .search-align {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; }
+    .homepage-container .search-align .subtitle-align {
+      width: 100%; }
 
-.search-align {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center; }
+.btn-align {
+  width: 100px;
+  text-align: right; }
