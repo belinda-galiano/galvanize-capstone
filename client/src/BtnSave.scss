@@ -1,8 +1,8 @@
-$accent-color:#E91E63;
+@import './variables.scss';
 $text-color:#ffffff;
 
 .btn-color{
-  background-color: $accent-color;
+  background-color: $secondary-color !important;
   color: $text-color;
   min-width: 64px;
   padding: 0px 16px;

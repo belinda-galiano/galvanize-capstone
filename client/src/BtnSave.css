@@ -1,5 +1,5 @@
 .btn-color {
-  background-color: #E91E63;
+  background-color: #E91E63 !important;
   color: #ffffff;
   min-width: 64px;
   padding: 0px 16px; }

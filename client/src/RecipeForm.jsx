@@ -5,8 +5,8 @@ import './RecipeForm.css';
 import TimeInput from './TimeInput';
 import Servings from './Servings';
 import IngredientListEdit from './IngredientListEdit';
-import BtnAdd from './BtnAdd';
 import TextField from './TextField';
+import Textarea from './Textarea';
 import AddImage from './AddImage';
 import BtnSave from './BtnSave';
 import SecondaryHeader from './SecondaryHeader';
@@ -47,20 +47,26 @@ class RecipeForm extends Component {
             <TimeInput name="Active" />
             <TimeInput name="Total" />
             <Servings servings={servings} />
-            <h5 className="mdc-typography--subtitle2">Ingredients</h5>
+            <h5 id="ingredients-list-form" className="mdc-typography--subtitle2">Ingredients</h5>
             <IngredientListEdit ingredient={ingredient} ingredQty={ingredQty} />
-            <IngredientListEdit ingredient={ingredient} ingredQty={ingredQty} />
-            <Link to="/IngredientForm"><BtnAdd name="Add ingredient" /></Link>
+            <Link to="/ingredient-form" className="mdc-button mdc-button--unelevated btn-add-style mdc-typography--button">
+              <i className="material-icons mdc-button__icon" aria-hidden="true">add</i>
+              Add ingredient
+            </Link>
             <h5 className="mdc-typography--subtitle2">Directions</h5>
             <p className="mdc-typography--body2 highlight-line">We recomend write the directions by steps</p>
             <div className="el-style">
               <p className="mdc-typography--body1">
                 <span>1. </span>
-            Preheat the oven to 375F (190C).
+                Preheat the oven to 375F (190C).
               </p>
             </div>
-            <BtnAdd name="Add Direction" />
+            <Link to="/directions-form" className="mdc-button mdc-button--unelevated btn-add-style mdc-typography--button">
+              <i className="material-icons mdc-button__icon" aria-hidden="true">add</i>
+              Add directions
+            </Link>
             <h5 className="mdc-typography--subtitle2">Notes</h5>
+            <Textarea />
             <div className="align-right">
               <BtnSave name="Save" />
             </div>

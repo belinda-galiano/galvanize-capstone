@@ -30,7 +30,7 @@ class App extends Component {
           <IngredientsList path="/ingredient-list" ingredients={recipes[0].ingredients} />
           <NutritionFactsPage path="/nutrition-facts/:id" nutrition={nutrition} />
           <RecipeForm path="/recipe-form" />
-          <IngredientListEdit path="/ingredient-input" key={recipes[0].ingredients} />
+          <IngredientListEdit path="/ingredient-edit" key={recipes[0].ingredients} />
           <IngredientForm path="/ingredient-form" />
           <DirectionsForm path="/directions-form" />
         </Router>

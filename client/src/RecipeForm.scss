@@ -1,14 +1,12 @@
-$color: green;
+@import './variables.scss';
 
-.mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
-  color: var(--mdc-primary-theme, $color);
-}
 
 .form-container {
   display: flex;
   flex-direction: column;
   margin-top: 16px;
   padding: 4px 8px; 
+  overflow: hidden;
 }
 
 .align-right{
@@ -16,10 +14,13 @@ $color: green;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  margin-bottom: 8px;
+  margin: 8px 0px;
 }
 
 .highlight-line{
   background-color: #FAFAFA;
   padding: 4px 4px;
+}
+.btn-add-style{
+  background-color: $primary-color !important;
 }
