@@ -1,8 +1,9 @@
 .recipe-img {
-  max-height: 300%; }
+  width: 95%; }
 
 .recipe-page-container {
-  padding: 8px; }
+  padding: 8px;
+  overflow: hidden; }
 
 .space-between-align {
   justify-content: space-between; }

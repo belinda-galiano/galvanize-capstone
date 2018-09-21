@@ -9,21 +9,21 @@ import SecondaryHeader from './SecondaryHeader';
 
 //
 
-const RecipePage = ({ recipe }) => (
+const RecipePage = ({ recipe, toggleFavorite }) => (
   <div>
     <SecondaryHeader />
     <div className="mdc-top-app-bar--fixed-adjust">
-      <div className="recipe-img-container">
-        <img src={recipe.image} alt="Green Warrior Protein Smoothie" className="recipe-img" />
-      </div>
+      <img src={recipe.image} alt="Green Warrior Protein Smoothie" className="recipe-img" />
       <div className="recipe-page-container">
         <div className="row-align space-between-align ">
-          <i className="material-icons">
+          <i onClick={event => toggleFavorite(recipe.id)} className="material-icons">
             { recipe.favorite ? 'favorite' : 'favorite_border' }
           </i>
-          <i className="material-icons">
-            edit
-          </i>
+          <Link to="/recipe-form">
+            <i className="material-icons">
+              edit
+            </i>
+          </Link>
         </div>
         <h5 className="mdc-typography--headline5 tilte">{recipe.title}</h5>
         <p className="mdc-typography--subtitle2 p-tags" style={{ marginLeft: '8px' }}>{recipe.tags}</p>

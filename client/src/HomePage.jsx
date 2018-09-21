@@ -5,6 +5,7 @@ import { Link } from '@reach/router';
 import Search from './Search';
 import RecipeCardContainer from './RecipeCardContainer';
 import MainHeader from './MainHeader';
+import Footer from './Footer';
 
 
 const HomePage = ({ recipes }) => (
@@ -34,6 +35,7 @@ const HomePage = ({ recipes }) => (
         <p>It's free!</p> */}
       </div>
     </div>
+    <Footer />
   </div>
 );
 export default HomePage;

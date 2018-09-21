@@ -1,5 +1,9 @@
 import { connect } from 'react-redux';
-import RecipePage from 'RecipePage';
+import RecipePage from './RecipePage';
+
+const mapStateToProps = (state, ownProps) => ({
+  recipe: state.recipes[ownProps.id - 1],
+});
 
 const mapDispatchToProps = dispatch => ({
   toggleFavorite: recipeId => dispatch({
@@ -10,4 +14,4 @@ const mapDispatchToProps = dispatch => ({
   }),
 });
 
-export default connect(null, mapDispatchToProps)(RecipePage);
+export default connect(mapStateToProps, mapDispatchToProps)(RecipePage);
