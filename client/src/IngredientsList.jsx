@@ -32,5 +32,5 @@ mg
 export default IngredientsList;
 
 IngredientsList.propTypes = {
-  ingredients: PropTypes.string.isRequired,
+  ingredients: PropTypes.arrayOf(PropTypes.object).isRequired,
 };

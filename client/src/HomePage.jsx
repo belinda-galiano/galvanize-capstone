@@ -3,7 +3,7 @@ import './HomePage.css';
 import { Link } from '@reach/router';
 
 import Search from './Search';
-import RecipeCard from './RecipeCard';
+import RecipeCardContainer from './RecipeCardContainer';
 import MainHeader from './MainHeader';
 
 
@@ -19,7 +19,7 @@ const HomePage = ({ recipes }) => (
         <div className="headline6-align">
           <h6 className="mdc-typography--headline6 headline6-style">Recipes</h6>
         </div>
-        { recipes.map(recipe => <RecipeCard {...recipe} key={recipe.title} />)}
+        { recipes.map(recipe => <RecipeCardContainer {...recipe} key={recipe.title} />)}
         <button className="mdc-button see-allbtn-align">
             See all
         </button>

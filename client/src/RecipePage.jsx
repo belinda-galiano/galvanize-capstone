@@ -1,10 +1,13 @@
 import React from 'react';
 import { Link } from '@reach/router';
+// import { PropTypes } from 'prop-types';
 import './RecipePage.css';
 
 import IngredientsList from './IngredientsList';
 import DirectionsList from './DirectionsList';
 import SecondaryHeader from './SecondaryHeader';
+
+//
 
 const RecipePage = ({ recipe }) => (
   <div>
@@ -16,7 +19,7 @@ const RecipePage = ({ recipe }) => (
       <div className="recipe-page-container">
         <div className="row-align space-between-align ">
           <i className="material-icons">
-            favorite_border
+            { recipe.favorite ? 'favorite' : 'favorite_border' }
           </i>
           <i className="material-icons">
             edit

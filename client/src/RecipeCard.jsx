@@ -9,8 +9,6 @@ class RecipeCard extends React.Component {
 
     this.handleClick = this.handleClick.bind(this);
     this.handleClickFav = this.handleClickFav.bind(this);
-
-    this.state = { favorite: false };
   }
 
   handleClick() {
@@ -18,13 +16,17 @@ class RecipeCard extends React.Component {
   }
 
   handleClickFav(event) {
+    // stopPropagation so that it does not navigate to recipe page.
     event.stopPropagation();
-    // TODO: Save as a favorite
-    alert('Not saving favorites yet.');
+
+    const { toggleFavorite, id } = this.props;
+    toggleFavorite(id);
   }
 
   render() {
-    const { title, tags, image } = this.props;
+    const {
+      title, tags, image, favorite,
+    } = this.props;
 
     return (
       <div onClick={this.handleClick}>
@@ -34,11 +36,11 @@ class RecipeCard extends React.Component {
               <h6 className="mdc-typography--headline6">{title}</h6>
               <p className="mdc-typography--body2 text-tags">
                 {tags.map(t => (
-                  <span style={{ marginLeft: '8px' }}>{t}</span>
+                  <span key={t} style={{ marginLeft: '8px' }}>{t}</span>
                 ))}
               </p>
               <i onClick={this.handleClickFav} className="material-icons icon-size">
-                favorite_border
+                { favorite ? 'favorite' : 'favorite_border' }
               </i>
             </div>
           </div>
@@ -52,6 +54,12 @@ export default RecipeCard;
 RecipeCard.propTypes = {
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
-  tags: PropTypes.string.isRequired,
+  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
   image: PropTypes.string.isRequired,
+  toggleFavorite: PropTypes.func.isRequired,
+  favorite: PropTypes.bool,
+};
+
+RecipeCard.defaultProps = {
+  favorite: false,
 };
