@@ -8,7 +8,7 @@ import BtnSave from './BtnSave';
 
 const IngredientForm = () => (
   <div>
-    <SecondaryHeader />
+    <SecondaryHeader name="Add Ingredient" />
     <div className="mdc-top-app-bar--fixed-adjust">
       <div className="form-container">
         <div className="qty-units-align">

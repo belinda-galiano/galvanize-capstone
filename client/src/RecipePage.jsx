@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from '@reach/router';
-// import { PropTypes } from 'prop-types';
+import { PropTypes } from 'prop-types';
 import './RecipePage.css';
 
 import IngredientsList from './IngredientsList';
@@ -11,7 +11,7 @@ import SecondaryHeader from './SecondaryHeader';
 
 const RecipePage = ({ recipe, toggleFavorite }) => (
   <div>
-    <SecondaryHeader />
+    <SecondaryHeader name="Recipe" />
     <div className="mdc-top-app-bar--fixed-adjust">
       <img src={recipe.image} alt="Green Warrior Protein Smoothie" className="recipe-img" />
       <div className="recipe-page-container">
@@ -83,3 +83,8 @@ const RecipePage = ({ recipe, toggleFavorite }) => (
 );
 
 export default RecipePage;
+
+RecipePage.propTypes = {
+  toggleFavorite: PropTypes.func.isRequired,
+
+};

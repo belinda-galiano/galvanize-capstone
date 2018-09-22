@@ -1,10 +1,30 @@
-export const nutrition = {
-  fat: { qty: 8, perc: 10 },
+export const nutrition = [{
+  'serving Size': 0,
+  calories: 0,
+  'total fat': {
+    qty: 8,
+    perc: 10,
+    'saturated fat': { qty: 8, perc: 10 },
+    'trans fat': { qty: 8, perc: null },
+  },
   cholesterol: { qty: 0, perc: 0 },
+  sodium: { qty: 0, perc: 0 },
+  'total carbohydrate': {
+    qty: 0,
+    perc: 0,
+    'dietary fiber': { qty: 0, perc: 0 },
+    sugars: { qty: 0, perc: 0 },
+  },
   protein: { qty: 0, perc: null },
-  'vitamin D': { qty: 5, perc: 25 },
-  'vitamin C': { qty: 20, perc: 2 },
-};
+  'vitamin A': { perc: 0 },
+  'vitamin B': { perc: 0 },
+  'vitamin C': { perc: 0 },
+  'vitamin D': { perc: 0 },
+  'vitamin E': { perc: 0 },
+  calcium: { perc: 0 },
+  iron: { perc: 0 },
+  potassium: { perc: 0 },
+}];
 
 export const recipes = [{
   id: 1,

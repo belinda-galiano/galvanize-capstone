@@ -7,7 +7,7 @@ import BtnSave from './BtnSave';
 
 const DirectionsForm = () => (
   <div>
-    <SecondaryHeader />
+    <SecondaryHeader name="Add Direction" />
     <div className="mdc-top-app-bar--fixed-adjust">
       <div className="form-container">
         <p className="mdc-typography--body2 highlight-line">We recomend write the directions by steps</p>

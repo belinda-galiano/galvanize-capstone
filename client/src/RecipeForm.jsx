@@ -9,7 +9,7 @@ import TextField from './TextField';
 import Textarea from './Textarea';
 import AddImage from './AddImage';
 import BtnSave from './BtnSave';
-import SecondaryHeader from './SecondaryHeader';
+import MainHeader from './MainHeader';
 
 class RecipeForm extends Component {
   constructor(props) {
@@ -37,39 +37,38 @@ class RecipeForm extends Component {
     } = this.state;
     return (
       <div>
-        <SecondaryHeader />
-        <div className="mdc-top-app-bar--fixed-adjust">
-          <div className="form-container">
-            <TextField name="Title" className="" />
-            <AddImage name="Add image" />
-            <TextField name="Tags" />
-            <h5 className="mdc-typography--subtitle2">Time</h5>
-            <TimeInput name="Active" />
-            <TimeInput name="Total" />
-            <Servings servings={servings} />
-            <h5 id="ingredients-list-form" className="mdc-typography--subtitle2">Ingredients</h5>
-            <IngredientListEdit ingredient={ingredient} ingredQty={ingredQty} />
-            <Link to="/ingredient-form" className="mdc-button mdc-button--unelevated btn-add-style mdc-typography--button">
-              <i className="material-icons mdc-button__icon" aria-hidden="true">add</i>
+        <MainHeader className="" />
+        <div className="mdc-top-app-bar--prominent-fixed-adjust" />
+        <div className="form-container">
+          <TextField name="Title" className="" />
+          <AddImage name="Add image" />
+          <TextField name="Tags" />
+          <h5 className="mdc-typography--subtitle2">Time</h5>
+          <TimeInput name="Active" />
+          <TimeInput name="Total" />
+          <Servings servings={servings} />
+          <h5 id="ingredients-list-form" className="mdc-typography--subtitle2">Ingredients</h5>
+          <IngredientListEdit ingredient={ingredient} ingredQty={ingredQty} />
+          <Link to="/ingredient-form" className="mdc-button mdc-button--unelevated btn-add-style mdc-typography--button">
+            <i className="material-icons mdc-button__icon" aria-hidden="true">add</i>
               Add ingredient
-            </Link>
-            <h5 className="mdc-typography--subtitle2">Directions</h5>
-            <p className="mdc-typography--body2 highlight-line">We recomend write the directions by steps</p>
-            <div className="el-style">
-              <p className="mdc-typography--body1">
-                <span>1. </span>
+          </Link>
+          <h5 className="mdc-typography--subtitle2">Directions</h5>
+          <p className="mdc-typography--body2 highlight-line">We recomend write the directions by steps</p>
+          <div className="el-style">
+            <p className="mdc-typography--body1">
+              <span>1. </span>
                 Preheat the oven to 375F (190C).
-              </p>
-            </div>
-            <Link to="/directions-form" className="mdc-button mdc-button--unelevated btn-add-style mdc-typography--button">
-              <i className="material-icons mdc-button__icon" aria-hidden="true">add</i>
+            </p>
+          </div>
+          <Link to="/directions-form" className="mdc-button mdc-button--unelevated btn-add-style mdc-typography--button">
+            <i className="material-icons mdc-button__icon" aria-hidden="true">add</i>
               Add directions
-            </Link>
-            <h5 className="mdc-typography--subtitle2">Notes</h5>
-            <Textarea />
-            <div className="align-right">
-              <BtnSave name="Save" />
-            </div>
+          </Link>
+          <h5 className="mdc-typography--subtitle2">Notes</h5>
+          <Textarea />
+          <div className="align-right">
+            <BtnSave name="Save" />
           </div>
         </div>
       </div>

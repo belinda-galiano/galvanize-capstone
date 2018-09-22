@@ -14,7 +14,7 @@ arrow_back
           </i>
 
         </Link>
-        <span className="mdc-top-app-bar__title">{name}</span>
+        <span className="mdc-top-app-bar__title mdc-typography--headline6">{name}</span>
       </section>
     </div>
   </header>

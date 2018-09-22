@@ -11,6 +11,7 @@ import RecipeForm from './RecipeForm';
 import IngredientForm from './IngredientForm';
 import DirectionsForm from './DirectionsForm';
 import HomeContainer from './HomeContainer';
+import MyRecipesContainer from './MyRecipesContainer';
 import IngredientListEdit from './IngredientListEdit';
 import IngredientsList from './IngredientsList';
 
@@ -22,6 +23,7 @@ const App = () => (
   <Provider store={store}>
     <Router>
       <HomeContainer path="/" />
+      <MyRecipesContainer path="/my-recipes" />
       <RecipePageContainer path="/recipe/:id" />
       <IngredientsList path="/ingredient-list" ingredients={recipes[0].ingredients} />
       <NutritionFactsPage path="/nutrition-facts/:id" nutrition={nutrition} />

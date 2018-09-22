@@ -1,25 +1,40 @@
-.table-body {
-  padding: 8px; }
+.page-container {
+  margin: 0px auto; }
 
 .nutrition-table {
-  width: 100%;
-  line-height: 1.5; }
-  .nutrition-table td:first-child {
-    width: 75%;
-    border-bottom: 1px solid #558B2F; }
-  .nutrition-table td:nth-child(2) {
-    border-bottom: 1px solid #558B2F; }
+  display: table; }
 
-.nutrition-table-border {
-  border-bottom: 1px solid green; }
+.center {
+  text-align: center; }
 
-.qty {
-  padding-left: 24px; }
+td {
+  padding: 3px; }
 
-.bold-fonts {
-  font-weight: bold; }
+td, th {
+  display: table-cell;
+  vertical-align: inherit; }
 
-/* .main-divider-line { 
-  height:3px; 
-  background: #558B2F 
-} */
+.left {
+  text-align: left; }
+
+.right {
+  text-align: right; }
+
+.main-divider {
+  background-color: #000000;
+  height: 10px; }
+
+.second-divider {
+  background-color: #000000;
+  padding: 8px;
+  height: 1px; }
+
+.third-divider {
+  background-color: #000000;
+  padding: 4px;
+  height: 1px; }
+
+.divider {
+  background-color: #000000;
+  padding: 0px;
+  height: 1px; }

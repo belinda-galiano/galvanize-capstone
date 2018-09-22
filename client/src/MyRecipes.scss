@@ -1,0 +1,26 @@
+.my-recipes-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  margin-top: 16px;
+  overflow: hidden; 
+  .search-align {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+  }
+}
+
+.headline6-align{
+  width: 100%;
+  padding-left: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  .headline6-style{
+    color: #558B2F;
+    margin: 8px 0px;
+  }
+}
