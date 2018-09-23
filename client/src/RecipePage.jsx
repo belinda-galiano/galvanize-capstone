@@ -13,7 +13,7 @@ const RecipePage = ({ recipe, toggleFavorite }) => (
   <div>
     <SecondaryHeader name="Recipe" />
     <div className="mdc-top-app-bar--fixed-adjust">
-      <img src={recipe.image} alt="Green Warrior Protein Smoothie" className="recipe-img" />
+      <img src={recipe.image} alt="recipe image" className="recipe-img" />
       <div className="recipe-page-container">
         <div className="row-align space-between-align ">
           <i onClick={event => toggleFavorite(recipe.id)} className="material-icons">

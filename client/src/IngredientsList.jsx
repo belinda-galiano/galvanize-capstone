@@ -4,20 +4,17 @@ import './IngredientsList.css';
 
 const IngredientsList = ({ ingredients }) => {
   const list = ingredients
-    .map(ingredient => (
-      <div>
-        <li className="mdc-list-item">
-          <span className="mdc-list-item__text">
-            <span className="mdc-list-item__primary-text mdc-typography--body1">
-              {ingredient.food}
-              {''}
-              {ingredient.qty}
-mg
-            </span>
-            <span className="mdc-list-item__secondary-text mdc-typography--body2">{ingredient.notes}</span>
+    .map((ingredient, i) => (
+      <li key={i} className="mdc-list-item">
+        <span className="mdc-list-item__text">
+          <span className="mdc-list-item__primary-text mdc-typography--body1">
+            {ingredient.name}
+            {''}
+            {ingredient.qty}
           </span>
-        </li>
-      </div>
+          <span className="mdc-list-item__secondary-text mdc-typography--body2">{ingredient.note}</span>
+        </span>
+      </li>
     ));
 
   return (

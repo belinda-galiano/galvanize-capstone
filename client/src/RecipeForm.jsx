@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import './RecipeForm.css';
+import { navigate } from '@reach/router';
 
 import IngredientListEdit from './IngredientListEdit';
 import TextField from './TextField';
 import SecondaryHeader from './SecondaryHeader';
+import './RecipeForm.css';
 
 class RecipeForm extends Component {
   constructor(props) {
@@ -74,7 +75,10 @@ class RecipeForm extends Component {
         active: [Number(this.state.activeHours), Number(this.state.activeMinutes)],
         total: [Number(this.state.totalHours), Number(this.state.totalMinutes)],
       },
+      favorite: true,
     });
+
+    navigate('/my-recipes');
   }
 
   render() {

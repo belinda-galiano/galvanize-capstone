@@ -10,9 +10,8 @@ import NutritionFactsPage from './NutritionFactsPage';
 import RecipeFormContainer from './RecipeFormContainer';
 import HomeContainer from './HomeContainer';
 import MyRecipesContainer from './MyRecipesContainer';
-import IngredientsList from './IngredientsList';
 
-import { recipes, dataNutrition } from './data';
+import { dataNutrition } from './data';
 
 const store = createStore(reducer);
 
@@ -22,7 +21,6 @@ const App = () => (
       <HomeContainer path="/" />
       <MyRecipesContainer path="/my-recipes" />
       <RecipePageContainer path="/recipe/:id" />
-      <IngredientsList path="/ingredient-list" ingredients={recipes[0].ingredients} />
       <NutritionFactsPage path="/nutrition-facts/:id" nutrition={dataNutrition[0]} />
       <RecipeFormContainer path="/recipe-form" />
     </Router>
