@@ -12,7 +12,6 @@ import IngredientForm from './IngredientForm';
 import DirectionsForm from './DirectionsForm';
 import HomeContainer from './HomeContainer';
 import MyRecipesContainer from './MyRecipesContainer';
-import IngredientListEdit from './IngredientListEdit';
 import IngredientsList from './IngredientsList';
 
 import { recipes, dataNutrition } from './data';
@@ -28,7 +27,6 @@ const App = () => (
       <IngredientsList path="/ingredient-list" ingredients={recipes[0].ingredients} />
       <NutritionFactsPage path="/nutrition-facts/:id" nutrition={dataNutrition[0]} />
       <RecipeForm path="/recipe-form" />
-      <IngredientListEdit path="/ingredient-edit" />
       <IngredientForm path="/ingredient-form" />
       <DirectionsForm path="/directions-form" />
     </Router>

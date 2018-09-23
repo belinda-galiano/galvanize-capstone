@@ -18,3 +18,18 @@
 
 .btn-add-style {
   background-color: #558B2F !important; }
+
+.time-cell {
+  width: 72px; }
+
+.time-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0px 8px; }
+  .time-container p {
+    width: 75px; }
+
+.form-text-field {
+  width: 350px; }
