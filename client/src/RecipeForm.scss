@@ -1,13 +1,6 @@
 @import './variables.scss';
 
-
-.form-container {
-  display: flex;
-  flex-direction: column;
-  margin-top: 16px;
-  padding: 4px 8px; 
-  overflow: hidden;
-}
+$default-form-width: 350px;
 
 .align-right{
   display: flex;
@@ -41,6 +34,21 @@
   }
 }
 
-.form-text-field {
-  width: 350px;
+.form {
+  &-text-field {
+    width: $default-form-width;
+  }
+
+  &-textarea {
+    width: $default-form-width;
+    background-color: #eee;
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    padding: 4px 8px; 
+    overflow: hidden;
+  }
 }

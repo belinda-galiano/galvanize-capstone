@@ -1,8 +1,10 @@
 import { connect } from 'react-redux';
 import RecipePage from './RecipePage';
 
+const findRecipe = (recipes, id) => recipes.filter(r => r.id == id).pop();
+
 const mapStateToProps = (state, ownProps) => ({
-  recipe: state.recipes[ownProps.id - 1],
+  recipe: findRecipe(state.recipes, ownProps.id),
 });
 
 const mapDispatchToProps = dispatch => ({

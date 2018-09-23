@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
-import { Link } from '@reach/router';
 import './RecipeForm.css';
 
 import IngredientListEdit from './IngredientListEdit';
 import TextField from './TextField';
-import Textarea from './Textarea';
-import BtnSave from './BtnSave';
-import MainHeader from './MainHeader';
+import SecondaryHeader from './SecondaryHeader';
 
 class RecipeForm extends Component {
   constructor(props) {
@@ -14,7 +11,7 @@ class RecipeForm extends Component {
     this.state = {
       title: '',
       tags: '',
-      imageUrl: '',
+      image: '',
       activeHours: '',
       activeMinutes: '',
       totalHours: '',
@@ -24,10 +21,25 @@ class RecipeForm extends Component {
       iqty: '',
       inote: '',
       ingredients: [],
+      directions: [],
+      step: '',
+      notes: '',
     };
 
     this.addIngredient = this.addIngredient.bind(this);
+    this.addDirection = this.addDirection.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  addDirection() {
+    const directions = [...this.state.directions];
+    directions.push(this.state.step);
+
+    this.setState({
+      directions,
+      step: '',
+    });
   }
 
   addIngredient() {
@@ -53,18 +65,30 @@ class RecipeForm extends Component {
     });
   }
 
+  handleSubmit(event) {
+    event.preventDefault();
+    this.props.saveRecipe({
+      ...this.state,
+      tags: this.state.tags.split(),
+      time: {
+        active: [Number(this.state.activeHours), Number(this.state.activeMinutes)],
+        total: [Number(this.state.totalHours), Number(this.state.totalMinutes)],
+      },
+    });
+  }
+
   render() {
     const {
-      title, servings, ingredients, tags, imageUrl, activeHours, activeMinutes, totalHours, totalMinutes, iname, iqty, inote,
+      title, servings, ingredients, tags, activeHours, activeMinutes, totalHours, totalMinutes, iname, iqty, inote, directions, step, notes,
     } = this.state;
 
     return (
-      <div>
-        <MainHeader className="" />
-        <div className="mdc-top-app-bar--prominent-fixed-adjust" />
+      <form onSubmit={this.handleSubmit}>
+        <SecondaryHeader name="Create Recipe" />
+        <div className="mdc-top-app-bar--fixed-adjust" />
         <div className="form-container">
           <TextField name="Title" value={title} onChange={this.handleChange} field="title" />
-          <TextField name="Add image" value={imageUrl} onChange={this.handleChange} field="imageUrl" icon="insert_photo" />
+          <TextField name="Add image" value={this.state.image} onChange={this.handleChange} field="image" icon="insert_photo" />
           <TextField name="Tags" value={tags} onChange={this.handleChange} field="tags" />
           <h5 className="mdc-typography--subtitle2">Time</h5>
           <div className="time-container">
@@ -89,25 +113,26 @@ class RecipeForm extends Component {
             <i className="material-icons mdc-button__icon" aria-hidden="true">add</i>
               Add ingredient
           </button>
-          <h5 className="mdc-typography--subtitle2">Directions</h5>
+          <div className="my-text-label">Directions</div>
           <p className="mdc-typography--body2 highlight-line">We recomend write the directions by steps</p>
           <div className="el-style">
-            <p className="mdc-typography--body1">
-              <span>1. </span>
-                Preheat the oven to 375F (190C).
-            </p>
+            <ol className="mdc-typography--body1">
+              {directions.map((direction, i) => <li key={i}>{direction}</li>)}
+            </ol>
           </div>
-          <Link to="/directions-form" className="mdc-button mdc-button--unelevated btn-add-style mdc-typography--button">
+          <TextField value={step} field="step" onChange={this.handleChange} isTextArea textCls="form-textarea" />
+          <button type="button" className="mdc-button mdc-button--unelevated btn-add-style mdc-typography--button" onClick={this.addDirection}>
             <i className="material-icons mdc-button__icon" aria-hidden="true">add</i>
               Add directions
-          </Link>
-          <h5 className="mdc-typography--subtitle2">Notes</h5>
-          <Textarea name="Notes" value="" />
+          </button>
+          <TextField name="Notes" value={notes} field="notes" onChange={this.handleChange} isTextArea textCls="form-textarea" />
           <div className="align-right">
-            <BtnSave name="Save" />
+            <button type="submit" className="mdc-button mdc-button--raised btn-color mdc-typography--button">
+          Save
+            </button>
           </div>
         </div>
-      </div>
+      </form>
     );
   }
 }

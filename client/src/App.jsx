@@ -7,9 +7,7 @@ import './App.css';
 import reducer from './reducer';
 import RecipePageContainer from './RecipePageContainer';
 import NutritionFactsPage from './NutritionFactsPage';
-import RecipeForm from './RecipeForm';
-import IngredientForm from './IngredientForm';
-import DirectionsForm from './DirectionsForm';
+import RecipeFormContainer from './RecipeFormContainer';
 import HomeContainer from './HomeContainer';
 import MyRecipesContainer from './MyRecipesContainer';
 import IngredientsList from './IngredientsList';
@@ -26,9 +24,7 @@ const App = () => (
       <RecipePageContainer path="/recipe/:id" />
       <IngredientsList path="/ingredient-list" ingredients={recipes[0].ingredients} />
       <NutritionFactsPage path="/nutrition-facts/:id" nutrition={dataNutrition[0]} />
-      <RecipeForm path="/recipe-form" />
-      <IngredientForm path="/ingredient-form" />
-      <DirectionsForm path="/directions-form" />
+      <RecipeFormContainer path="/recipe-form" />
     </Router>
   </Provider>
 );

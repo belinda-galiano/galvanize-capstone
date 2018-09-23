@@ -23,6 +23,15 @@ export default function (state = initialState, action) {
   console.log(action);
 
   switch (action.type) {
+    case 'RECIPE_CREATE':
+      const recipesCopy = [...state.recipes];
+      const newRecipe = {
+        ...action.payload,
+        id: state.recipes.length + 100,
+      };
+      recipesCopy.push(newRecipe);
+      return { ...state, recipes: recipesCopy };
+
     case 'TOGGLE_FAVORITE':
       return toggleFavorite(state, action.payload.recipeId);
 
