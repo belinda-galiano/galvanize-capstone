@@ -1,7 +1,10 @@
 import React from 'react';
 import './NutritionFactsPage.css';
+import BarChart from './BarChart';
+
 
 import SecondaryHeader from './SecondaryHeader';
+
 
 const NutritionFactsPage = ({ nutrition }) => (
   <div>
@@ -11,7 +14,7 @@ const NutritionFactsPage = ({ nutrition }) => (
         <table className="nutrition-table center">
           <tbody>
             <tr colSpan="2">
-              <td className="center">Nutrition Information</td>
+              <td className="center mdc-typography--headline4"><strong>Nutrition Facts</strong></td>
             </tr>
             <tr>
               <td className="left">Serving Size</td>
@@ -258,6 +261,7 @@ g
         </table>
       </div>
     </div>
+    <BarChart />
   </div>
 
 );
