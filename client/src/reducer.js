@@ -1,8 +1,8 @@
-import { recipes, nutrition } from './data';
+import { recipes, dataNutrition } from './data';
 
 const initialState = {
   recipes,
-  nutrition,
+  dataNutrition,
 };
 
 function toggleFavorite(state, recipeId) {

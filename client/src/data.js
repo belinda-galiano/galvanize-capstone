@@ -1,29 +1,29 @@
-export const nutrition = [{
-  'serving Size': 0,
-  calories: 0,
-  'total fat': {
+export const dataNutrition = [{
+  servingSize: 3,
+  calories: 300,
+  totalFat: {
     qty: 8,
     perc: 10,
-    'saturated fat': { qty: 8, perc: 10 },
-    'trans fat': { qty: 8, perc: null },
+    saturatedFat: { qty: 4, perc: 11 },
+    transFat: { qty: 6, perc: null },
   },
-  cholesterol: { qty: 0, perc: 0 },
-  sodium: { qty: 0, perc: 0 },
-  'total carbohydrate': {
-    qty: 0,
-    perc: 0,
-    'dietary fiber': { qty: 0, perc: 0 },
-    sugars: { qty: 0, perc: 0 },
+  cholesterol: { qty: 1, perc: 2 },
+  sodium: { qty: 2, perc: 4 },
+  totalCarbohydrate: {
+    qty: 12,
+    perc: 13,
+    dietaryFiber: { qty: 5, perc: 7 },
+    sugars: { qty: 2, perc: 3 },
   },
-  protein: { qty: 0, perc: null },
-  'vitamin A': { perc: 0 },
-  'vitamin B': { perc: 0 },
-  'vitamin C': { perc: 0 },
-  'vitamin D': { perc: 0 },
-  'vitamin E': { perc: 0 },
-  calcium: { perc: 0 },
-  iron: { perc: 0 },
-  potassium: { perc: 0 },
+  protein: { qty: 3, perc: null },
+  vitaminA: { perc: 1 },
+  vitaminB: { perc: 2 },
+  vitaminC: { perc: 3 },
+  vitaminD: { perc: 4 },
+  vitaminE: { perc: 5 },
+  calcium: { perc: 6 },
+  iron: { perc: 7 },
+  potassium: { perc: 8 },
 }];
 
 export const recipes = [{

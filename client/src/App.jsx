@@ -15,7 +15,7 @@ import MyRecipesContainer from './MyRecipesContainer';
 import IngredientListEdit from './IngredientListEdit';
 import IngredientsList from './IngredientsList';
 
-import { recipes, nutrition } from './data';
+import { recipes, dataNutrition } from './data';
 
 const store = createStore(reducer);
 
@@ -26,7 +26,7 @@ const App = () => (
       <MyRecipesContainer path="/my-recipes" />
       <RecipePageContainer path="/recipe/:id" />
       <IngredientsList path="/ingredient-list" ingredients={recipes[0].ingredients} />
-      <NutritionFactsPage path="/nutrition-facts/:id" nutrition={nutrition} />
+      <NutritionFactsPage path="/nutrition-facts/:id" nutrition={dataNutrition[0]} />
       <RecipeForm path="/recipe-form" />
       <IngredientListEdit path="/ingredient-edit" />
       <IngredientForm path="/ingredient-form" />
