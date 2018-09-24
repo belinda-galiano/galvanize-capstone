@@ -33,11 +33,21 @@ const RecipePage = ({ recipe, toggleFavorite }) => (
           </i>
           <p className="mdc-typography--subtitle2">
             Active
-            {recipe.time.active}
+            {Math.floor(recipe.time.active / 60)}
+            {' '}
+            hours
+            {recipe.time.active % 60}
+            {' '}
+            minutes
           </p>
           <p className="mdc-typography--subtitle2">
             Total
-            {recipe.time.total}
+            {Math.floor(recipe.time.total / 60)}
+            {' '}
+            hours
+            {recipe.time.total % 60}
+            {' '}
+            minutes
           </p>
         </div>
         <div className="divider-line margin-between-8" />

@@ -6,14 +6,14 @@ import { Provider } from 'react-redux';
 import './App.css';
 import reducer from './reducer';
 import RecipePageContainer from './RecipePageContainer';
-import NutritionFactsPage from './NutritionFactsPage';
+// import NutritionFactsPage from './NutritionFactsPage';
 import RecipeFormContainer from './RecipeFormContainer';
 import HomeContainer from './HomeContainer';
 import MyRecipesContainer from './MyRecipesContainer';
-
-import { dataNutrition } from './data';
+import { getRecipes } from './api';
 
 const store = createStore(reducer);
+getRecipes(store);
 
 const App = () => (
   <Provider store={store}>
@@ -21,7 +21,7 @@ const App = () => (
       <HomeContainer path="/" />
       <MyRecipesContainer path="/my-recipes" />
       <RecipePageContainer path="/recipe/:id" />
-      <NutritionFactsPage path="/nutrition-facts/:id" nutrition={dataNutrition[0]} />
+      {/* <NutritionFactsPage path="/nutrition-facts/:id" nutrition={dataNutrition[0]} /> */}
       <RecipeFormContainer path="/recipe-form" />
     </Router>
   </Provider>

@@ -1,8 +1,6 @@
-import { recipes, dataNutrition } from './data';
-
 const initialState = {
-  recipes,
-  dataNutrition,
+  recipes: [],
+  dataNutrition: [],
 };
 
 function toggleFavorite(state, recipeId) {
@@ -23,6 +21,8 @@ export default function (state = initialState, action) {
   console.log(action);
 
   switch (action.type) {
+    case 'RECIPES_LOAD':
+      return { ...state, recipes: action.payload };
     case 'RECIPE_CREATE':
       const recipesCopy = [...state.recipes];
       const newRecipe = {
