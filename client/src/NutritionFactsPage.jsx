@@ -1,21 +1,46 @@
 import React from 'react';
 import './NutritionFactsPage.css';
 import BarChart from './BarChart';
-
-
 import SecondaryHeader from './SecondaryHeader';
 
+const nutrition = {
+  servingSize: '30g',
+  calories: 300,
+  totalFat: {
+    qty: 8,
+    perc: 10,
+    saturatedFat: { qty: 4, perc: 11 },
+    transFat: { qty: 6, perc: null },
+  },
+  cholesterol: { qty: 1, perc: 2 },
+  sodium: { qty: 2, perc: 4 },
+  totalCarbohydrate: {
+    qty: 12,
+    perc: 13,
+    dietaryFiber: { qty: 5, perc: 7 },
+    sugars: { qty: 2, perc: 3 },
+  },
+  protein: { qty: 3, perc: null },
+  vitaminA: { perc: 1 },
+  vitaminB: { perc: 2 },
+  vitaminC: { perc: 3 },
+  vitaminD: { perc: 4 },
+  vitaminE: { perc: 5 },
+  calcium: { perc: 6 },
+  iron: { perc: 7 },
+  potassium: { perc: 8 },
+};
 
-const NutritionFactsPage = ({ nutrition }) => (
+const NutritionFactsPage = ({ id /* nutrition */ }) => (
   <div>
-    <SecondaryHeader />
+    <SecondaryHeader name="Nutrition Facts" backTo={`/recipe/${id}`} />
     <div className="mdc-top-app-bar--fixed-adjust">
       <div className="page-container">
         <table className="nutrition-table center">
           <tbody>
-            <tr colSpan="2">
+            {/* <tr colSpan="2">
               <td className="center mdc-typography--headline4"><strong>Nutrition Facts</strong></td>
-            </tr>
+            </tr> */}
             <tr>
               <td className="left">Serving Size</td>
               <td className="right">{nutrition.servingSize}</td>
@@ -52,11 +77,11 @@ const NutritionFactsPage = ({ nutrition }) => (
                 <b>Total&nbsp;Fat</b>
                 &nbsp;
                 {nutrition.totalFat.qty}
-g
+                g
               </td>
               <td className="right">
                 {nutrition.totalFat.perc}
-&nbsp;%
+                &nbsp;%
               </td>
             </tr>
             <tr>
@@ -64,14 +89,14 @@ g
             </tr>
             <tr>
               <td className="left">
-              &nbsp;&nbsp;&nbsp;Saturated&nbsp;Fat
-                &nbsp;
+                &nbsp;&nbsp;&nbsp;Saturated&nbsp;Fat
+                  &nbsp;
                 {nutrition.totalFat.saturatedFat.qty}
-g
+                g
               </td>
               <td className="right">
                 {nutrition.totalFat.saturatedFat.perc}
-&nbsp;%
+                &nbsp;%
               </td>
             </tr>
             <tr>
@@ -84,7 +109,7 @@ g
                 &nbsp;Fat
                 &nbsp;
                 {nutrition.totalFat.transFat.qty}
-g
+                g
               </td>
             </tr>
             <tr>
@@ -95,11 +120,11 @@ g
                 <b>Cholesterol</b>
                 &nbsp;
                 {nutrition.cholesterol.qty}
-mg
+                mg
               </td>
               <td className="right">
                 {nutrition.cholesterol.perc}
-&nbsp;%
+                &nbsp;%
               </td>
             </tr>
             <tr>
@@ -110,11 +135,11 @@ mg
                 <b>Sodium</b>
                 &nbsp;
                 {nutrition.sodium.qty}
-mg
+                mg
               </td>
               <td className="right">
                 {nutrition.sodium.perc}
-&nbsp;%
+                &nbsp;%
               </td>
             </tr>
             <tr>
@@ -125,11 +150,11 @@ mg
                 <b>Total Carbohydrate</b>
                 &nbsp;
                 {nutrition.totalCarbohydrate.qty}
-g
+                g
               </td>
               <td className="right">
                 {nutrition.totalCarbohydrate.perc}
-&nbsp;%
+                &nbsp;%
               </td>
             </tr>
             <tr>
@@ -137,14 +162,14 @@ g
             </tr>
             <tr>
               <td className="left">
-              &nbsp;&nbsp;&nbsp;Dietary&nbsp;Fiber
-                &nbsp;
+                &nbsp;&nbsp;&nbsp;Dietary&nbsp;Fiber
+                  &nbsp;
                 {nutrition.totalCarbohydrate.dietaryFiber.qty}
-g
+                g
               </td>
               <td className="right">
                 {nutrition.totalCarbohydrate.dietaryFiber.perc}
-&nbsp;%
+                &nbsp;%
               </td>
             </tr>
             <tr>
@@ -152,10 +177,10 @@ g
             </tr>
             <tr>
               <td className="left">
-              &nbsp;&nbsp;&nbsp;Sugars
+                &nbsp;&nbsp;&nbsp;Sugars
 
                 {nutrition.totalCarbohydrate.sugars.qty}
-g
+                g
               </td>
               <td className="right" />
             </tr>
@@ -167,7 +192,7 @@ g
                 <b>Protein</b>
                 &nbsp;
                 {nutrition.protein.qty}
-g
+                g
               </td>
               <td className="right" />
             </tr>
@@ -178,7 +203,7 @@ g
               <td className="left">Vitamin A</td>
               <td className="right">
                 {nutrition.vitaminA.perc}
-&nbsp;%
+                &nbsp;%
               </td>
             </tr>
             <tr>
@@ -188,7 +213,7 @@ g
               <td className="left">Vitamin B</td>
               <td className="right">
                 {nutrition.vitaminB.perc}
-&nbsp;%
+                &nbsp;%
               </td>
             </tr>
             <tr>
@@ -198,7 +223,7 @@ g
               <td className="left">Vitamin C</td>
               <td className="right">
                 {nutrition.vitaminC.perc}
-&nbsp;%
+                &nbsp;%
               </td>
             </tr>
             <tr>
@@ -208,7 +233,7 @@ g
               <td className="left">Vitamin D</td>
               <td className="right">
                 {nutrition.vitaminD.perc}
-&nbsp;%
+                &nbsp;%
               </td>
             </tr>
             <tr>
@@ -218,7 +243,7 @@ g
               <td className="left">Vitamin E</td>
               <td className="right">
                 {nutrition.vitaminE.perc}
-&nbsp;%
+                &nbsp;%
               </td>
             </tr>
             <tr>
@@ -228,7 +253,7 @@ g
               <td className="left">Calcium</td>
               <td className="right">
                 {nutrition.calcium.perc}
-&nbsp;%
+                &nbsp;%
               </td>
             </tr>
             <tr>
@@ -238,7 +263,7 @@ g
               <td className="left">Iron</td>
               <td className="right">
                 {nutrition.iron.qty}
-&nbsp;%
+                &nbsp;%
               </td>
             </tr>
             <tr>
@@ -248,7 +273,7 @@ g
               <td className="left">Potassium</td>
               <td className="right">
                 {nutrition.potassium.perc}
-&nbsp;%
+                &nbsp;%
               </td>
             </tr>
             <tr>

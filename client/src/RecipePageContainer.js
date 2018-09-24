@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import RecipePage from './RecipePage';
 
-const findRecipe = (recipes, id) => recipes.filter(r => r.id == id).pop();
+const findRecipe = (recipes, id) => recipes.filter(r => String(r.id) === String(id)).pop();
 
 const mapStateToProps = (state, ownProps) => ({
   recipe: findRecipe(state.recipes, ownProps.id),

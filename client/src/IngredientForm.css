@@ -1,0 +1,22 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  padding: 4px 8px; }
+
+.units-cell {
+  width: 72px;
+  margin: 8px 8px; }
+
+.qty-units-align {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start; }
+
+.align-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 8px; }

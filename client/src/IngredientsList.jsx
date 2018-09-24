@@ -19,6 +19,7 @@ const IngredientsList = ({ ingredients }) => {
 
   return (
     <div>
+      <div style={{ marginTop: '16px' }} className="mdc-typography--subtitle1">Ingredients</div>
       <ul className="mdc-list mdc-list--two-line">
         {list}
       </ul>
