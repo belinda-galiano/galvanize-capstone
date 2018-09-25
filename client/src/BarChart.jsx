@@ -1,6 +1,7 @@
 import React from 'react';
 import * as d3 from 'd3';
 
+
 class BarChart extends React.Component {
   constructor(props) {
     super(props);
@@ -26,7 +27,7 @@ class BarChart extends React.Component {
       },
       {
         name: 'fat',
-        perc: 53,
+        perc: 8,
       },
       {
         name: 'carb',
@@ -34,40 +35,46 @@ class BarChart extends React.Component {
       },
       {
         name: 'proteins',
-        perc: 79,
+        perc: 10,
       },
     ];
 
-    const width = 390;
+    const width = 370;
     const textXOffset = 70;
     const textYOffset = 30;
     const textSize = 16;
+    const padding = 8;
     const barHeight = textYOffset * 0.66;
+    const colors = {
+      calories: 'FF9B00',
+      fat: 'FF0050',
+      carb: '009CE3',
+      proteins: '00BD66',
+    };
 
     svg.selectAll('rect')
       .data(data)
       .enter()
       .append('rect')
-      .attr('x', textXOffset + 10)
+      .attr('x', textXOffset)
       .attr('y', (d, i) => i * textYOffset)
       .attr('height', barHeight)
+      .attr('width', 0)
+      .style('fill', d => colors[d.name] || 'gray')
+      .transition()
       .attr('width', d => width * d.perc / 100)
-      .style('fill', (d) => {
-        if (d.name === 'calories') {
-          return 'fill', 'blue';
-        }
-        if (d.name === 'fat') {
-          return 'fill', 'orange';
-        }
-        if (d.name === 'carb') {
-          return 'fill', 'yellow';
-        }
-        if (d.name === 'proteins') {
-          return 'fill', 'orange';
-        }
-        return 'fill', 'gray';
-      });
+      .attr('x', textXOffset + 10)
+      .delay((d, i) => i * 20);
 
+    // .on('mouseover', (d) => {
+    //   d3.select(this)
+    //     .style('opacity', 0.5)
+    //     .style('fill', 'green');
+    // })
+    // .on('mouseout', (d) => {
+    //   d3.select(this)
+    //     .style('opacity', 1);
+    // });
 
     svg.selectAll('text')
       .data(data)
@@ -79,25 +86,15 @@ class BarChart extends React.Component {
       .attr('font-size', textSize)
       .attr('text-anchor', 'end');
 
-
-    //   svg.selectAll('rect')
-    //     .data(data)
-    //     .enter()
-    //     .append('rect')
-    //     .attr('x', (d, i) => i * 70)
-    //     .attr('y', (d, i) => 100 - 10 * d)
-    //     .attr('width', '8')
-    //     .attr('height', (d, i) => d * 10)
-    //     .attr('fill', 'green');
-
-  //   svg.selectAll('circle')
-  //     .data(data)
-  //     .enter()
-  //     .append('circle')
-  //     .attr('cx', '300 =+1')
-  //     .attr('cy', 200)
-  //     .attr('r', 50)
-  //     .style('fill', '#000000');
+    svg.selectAll('rect text')
+      .data(data)
+      .enter()
+      .append('text')
+      .attr('x', d => textXOffset + width * d.perc / 100 + 30)
+      .attr('y', (d, i) => i * textYOffset + barHeight * 0.70 + 2)
+      .text(d => `${d.perc.toString()}%`)
+      .attr('font-size', textSize)
+      .attr('text-anchor', 'middle');
   }
 
   render() {
