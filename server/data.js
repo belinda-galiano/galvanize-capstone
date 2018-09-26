@@ -32,7 +32,7 @@ module.exports.ingredients = [
 
 module.exports.recipes = [
   {
-    image: '/Green-Warrior-Protein-Smoothie.png',
+    image: '/Green_Warrior_Protein_Smoothie.png',
     title: 'Green Smoothie',
     active_time: 27,
     total_time: 100,
@@ -42,7 +42,7 @@ module.exports.recipes = [
   },
   {
     title: 'Roasted Carrot and White Bean Dip',
-    image: '/Roasted-Carrot-and-White-Bean-Dip.png',
+    image: '/Roasted_Carrot_and_White_Bean_Dip.png',
     tags: ['#Vegan', ' #gluten-free', '#carrots', '#refined sugar-free', '#soy-free'].join('|||'),
     active_time: 4,
     total_time: 24,
@@ -59,7 +59,7 @@ module.exports.recipes = [
   },
   {
     title: 'Roasted Beet Hummus with Hazelnut Oil & Rosemary',
-    image: '/Roasted-Beet-Hummus.png',
+    image: '/Roasted_Beet_Hummus_with_Hazelnut_Oil_&_Rosemary.png',
     tags: ['#beans', '#beet', 'tahini'].join('|||'),
     active_time: 10,
     total_time: 10,
