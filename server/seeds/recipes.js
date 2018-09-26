@@ -10,10 +10,8 @@ function insertIngredients(knex, ingredients, recipe_id) {
 
 exports.seed = function (knex, Promise) {
   // Deletes ALL existing entries
-  return Promise.all([
-    knex('recipes').del(),
-    knex('ingredients').del()
-  ])
+  return knex('ingredients').del()
+    .then(() => knex('recipes').del())
     .then(function () {
       // Inserts seed entries
       return knex('recipes')
