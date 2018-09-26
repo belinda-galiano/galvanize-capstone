@@ -68,7 +68,7 @@ class RecipeForm extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.props.saveRecipe({
+    const newRecipe = {
       ...this.state,
       tags: this.state.tags.split(),
       time: {
@@ -76,7 +76,17 @@ class RecipeForm extends Component {
         total: [Number(this.state.totalHours), Number(this.state.totalMinutes)],
       },
       favorite: true,
-    });
+    };
+
+    fetch('http://localhost:8080/recipes', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+      },
+      body: JSON.stringify(newRecipe),
+    })
+      .then(response => response.json())
+      .then(recipe => this.props.saveRecipe(recipe));
 
     navigate('/my-recipes');
   }

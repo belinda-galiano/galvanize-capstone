@@ -39,7 +39,7 @@ class RecipeCard extends React.Component {
                   <span key={t} style={{ marginLeft: '8px' }}>{t}</span>
                 ))}
               </p>
-              <i onClick={this.handleClickFav} className="material-icons icon-size">
+              <i onClick={this.handleClickFav} className="material-icons icon-size favorite">
                 { favorite ? 'favorite' : 'favorite_border' }
               </i>
             </div>

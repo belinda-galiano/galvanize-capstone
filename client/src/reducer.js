@@ -25,11 +25,7 @@ export default function (state = initialState, action) {
       return { ...state, recipes: action.payload };
     case 'RECIPE_CREATE':
       const recipesCopy = [...state.recipes];
-      const newRecipe = {
-        ...action.payload,
-        id: state.recipes.length + 100,
-      };
-      recipesCopy.push(newRecipe);
+      recipesCopy.push(action.payload);
       return { ...state, recipes: recipesCopy };
 
     case 'TOGGLE_FAVORITE':
