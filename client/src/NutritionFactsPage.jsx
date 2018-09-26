@@ -3,40 +3,16 @@ import './NutritionFactsPage.css';
 import BarChart from './BarChart';
 import SecondaryHeader from './SecondaryHeader';
 
-const nutrition = {
-  servingSize: '30g',
-  calories: 300,
-  totalFat: {
-    qty: 8,
-    perc: 10,
-    saturatedFat: { qty: 4, perc: 11 },
-    transFat: { qty: 6, perc: null },
-  },
-  cholesterol: { qty: 1, perc: 2 },
-  sodium: { qty: 2, perc: 4 },
-  totalCarbohydrate: {
-    qty: 12,
-    perc: 13,
-    dietaryFiber: { qty: 5, perc: 7 },
-    sugars: { qty: 2, perc: 3 },
-  },
-  protein: { qty: 3, perc: null },
-  vitaminA: { perc: 1 },
-  vitaminB: { perc: 2 },
-  vitaminC: { perc: 3 },
-  vitaminD: { perc: 4 },
-  vitaminE: { perc: 5 },
-  calcium: { perc: 6 },
-  iron: { perc: 7 },
-  potassium: { perc: 8 },
-};
+const NutritionFactsPage = ({ id, nutrition }) => {
+  if (!nutrition) {
+    return <div>loading...</div>;
+  }
 
-const NutritionFactsPage = ({ id /* nutrition */ }) => (
-  <div>
+  return (<div>
     <SecondaryHeader name="Nutrition Facts" backTo={`/recipe/${id}`} />
     <div className="mdc-top-app-bar--fixed-adjust">
       <div className="page-container">
-        <BarChart />
+        <BarChart nutrition={nutrition} />
         <table className="nutrition-table center" style={{ marginTop: '16px' }}>
           <tbody>
             {/* <tr colSpan="2">
@@ -287,9 +263,8 @@ const NutritionFactsPage = ({ id /* nutrition */ }) => (
         </table>
       </div>
     </div>
-
   </div>
-
-);
+  );
+};
 
 export default NutritionFactsPage;

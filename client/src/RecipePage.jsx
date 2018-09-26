@@ -13,6 +13,8 @@ const RecipePage = ({ recipe, toggleFavorite }) => {
     return <div>No recipe</div>;
   }
 
+  const favorite = recipe.favorite ? 'favorite' : '';
+
   return (
     <div>
       <SecondaryHeader name="Recipe" />
@@ -20,7 +22,7 @@ const RecipePage = ({ recipe, toggleFavorite }) => {
         <img src={recipe.image} alt="recipe" className="recipe-img" />
         <div className="recipe-page-container">
           <div className="row-align space-between-align ">
-            <i onClick={event => toggleFavorite(recipe.id)} className="material-icons">
+            <i onClick={event => toggleFavorite(recipe.id)} className={`material-icons ${favorite}`}>
               {recipe.favorite ? 'favorite' : 'favorite_border'}
             </i>
             <Link to="/recipe-form">
@@ -68,7 +70,7 @@ const RecipePage = ({ recipe, toggleFavorite }) => {
             </div>
           </div>
           <div className="divider-line margin-between-8" />
-          <Link to={`/nutrition-facts/${recipe.id}`} className="mdc-button mdc-button--raised">
+          <Link to={`/nutrition-facts/${recipe.id}`} className="mdc-button mdc-button--raised" onClick={() => window.scrollTo(0, 0)}>
             <i className="material-icons mdc-button__icon">info</i>
             Nutrition
           </Link>

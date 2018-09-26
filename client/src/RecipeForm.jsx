@@ -91,6 +91,10 @@ class RecipeForm extends Component {
     navigate('/my-recipes');
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     const {
       title, servings, ingredients, tags, activeHours, activeMinutes, totalHours, totalMinutes, iname, iqty, inote, directions, step, notes,

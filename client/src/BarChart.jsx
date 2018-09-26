@@ -11,90 +11,62 @@ class BarChart extends React.Component {
   }
 
   componentDidMount() {
-    d3.json('/NutritionFacts.json').then(this.drawChart);
+    this.drawChart(this.props.nutrition);
   }
 
   // rawData passed as an parmeter
-  drawChart() {
+  drawChart(nutrition) {
     const svg = d3.select(this.svgRef.current)
       .attr('width', 400)
       .attr('height', 600);
 
-    // const data = [rawData.dataNutrition.totalFat.perc];
-    // const nutrition = {
-    //   servingSize: '30g',
-    //   calories: 300,
-    //   totalFat: {
-    //     qty: 8,
-    //     perc: 10,
-    //     saturatedFat: { qty: 4, perc: 11 },
-    //     transFat: { qty: 6, perc: null },
-    //   },
-    //   cholesterol: { qty: 1, perc: 2 },
-    //   sodium: { qty: 2, perc: 4 },
-    //   totalCarbohydrate: {
-    //     qty: 12,
-    //     perc: 13,
-    //     dietaryFiber: { qty: 5, perc: 7 },
-    //     sugars: { qty: 2, perc: 3 },
-    //   },
-    //   protein: { qty: 3, perc: null },
-    //   vitaminA: { perc: 1 },
-    //   vitaminB: { perc: 2 },
-    //   vitaminC: { perc: 3 },
-    //   vitaminD: { perc: 4 },
-    //   vitaminE: { perc: 5 },
-    //   calcium: { perc: 6 },
-    //   iron: { perc: 7 },
-    //   potassium: { perc: 8 },
-    // };
     const data = [
       {
         name: 'Calories',
-        perc: 16,
+        perc: Math.round((nutrition.calories / 2000) * 100),
       },
       {
         name: 'Fat',
-        perc: 8,
+        perc: nutrition.totalFat.perc,
       },
       {
         name: 'Carb',
-        perc: 35,
+        perc: nutrition.totalCarbohydrate.perc,
       },
       {
         name: 'Proteins',
-        perc: 10,
+        perc: Math.round(100 * nutrition.protein.qty / 51),
       },
       {
         name: 'Vitamin A',
-        perc: 4,
+        perc: nutrition.vitaminA.perc,
       },
       {
         name: 'Vitamin B',
-        perc: 2,
+        perc: nutrition.vitaminB.perc,
       },
       {
         name: 'Vitamin C',
-        perc: 3,
+        perc: nutrition.vitaminC.perc,
       },
       {
         name: 'Vitamin D',
-        perc: 4,
+        perc: nutrition.vitaminD.perc,
       },
       {
         name: 'Vitamin E',
-        perc: 5,
+        perc: nutrition.vitaminE.perc,
       },
       {
         name: 'Calcium',
-        perc: 6,
+        perc: nutrition.calcium.perc,
       },
       {
         name: 'Iron',
-        perc: 7,
+        perc: nutrition.iron.perc,
       }, {
         name: 'Potassium',
-        perc: 8,
+        perc: nutrition.potassium.perc,
       },
     ];
 

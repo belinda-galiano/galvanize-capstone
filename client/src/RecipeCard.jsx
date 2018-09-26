@@ -12,7 +12,7 @@ class RecipeCard extends React.Component {
   }
 
   handleClick() {
-    navigate(`/recipe/${this.props.id}`);
+    navigate(`/recipe/${this.props.id}`).then(() => window.scrollTo(0, 0));
   }
 
   handleClickFav(event) {
@@ -39,7 +39,7 @@ class RecipeCard extends React.Component {
                   <span key={t} style={{ marginLeft: '8px' }}>{t}</span>
                 ))}
               </p>
-              <i onClick={this.handleClickFav} className="material-icons icon-size favorite">
+              <i onClick={this.handleClickFav} className="material-icons icon-size">
                 { favorite ? 'favorite' : 'favorite_border' }
               </i>
             </div>

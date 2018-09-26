@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import './App.css';
 import reducer from './reducer';
 import RecipePageContainer from './RecipePageContainer';
-import NutritionFactsPage from './NutritionFactsPage';
+import NutritionFactsContainer from './NutritionFactsContainer';
 import RecipeFormContainer from './RecipeFormContainer';
 import HomeContainer from './HomeContainer';
 import MyRecipesContainer from './MyRecipesContainer';
@@ -21,7 +21,7 @@ const App = () => (
       <HomeContainer path="/" />
       <MyRecipesContainer path="/my-recipes" />
       <RecipePageContainer path="/recipe/:id" />
-      <NutritionFactsPage path="/nutrition-facts/:id" />
+      <NutritionFactsContainer path="/nutrition-facts/:id" />
       <RecipeFormContainer path="/recipe-form" />
     </Router>
   </Provider>

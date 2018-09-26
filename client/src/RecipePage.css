@@ -4,6 +4,8 @@
 .recipe-page-container {
   padding: 8px 16px;
   overflow: hidden; }
+  .recipe-page-container .favorite {
+    color: #E91E63; }
 
 .recipe-servings {
   width: 50px; }
