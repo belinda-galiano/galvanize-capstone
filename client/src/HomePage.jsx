@@ -11,7 +11,7 @@ import Footer from './Footer';
 const HomePage = ({ recipes }) => (
   <div>
     <MainHeader />
-    <div className="mdc-top-app-bar--fixed-adjust">
+    <div className="mdc-top-app-bar--prominent-fixed-adjust">
       <div className="homepage-container">
         <div className="search-align">
           <Search />

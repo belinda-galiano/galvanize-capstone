@@ -1,0 +1,18 @@
+@import './variables.scss';
+
+.page-container{
+margin:0px auto;
+padding: 8px;
+}
+
+.second-divider{
+  background-color:$primary-color; 
+  padding: 4px;
+  height:1px;
+}
+
+.divider{
+  background-color:$primary-color ; 
+  padding: 0px;
+  height:1px;
+}

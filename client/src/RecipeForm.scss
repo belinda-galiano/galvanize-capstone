@@ -14,10 +14,15 @@ $default-form-width: 350px;
   background-color: #FAFAFA;
   padding: 4px 4px;
 }
-.btn-add-style{
+.btn{
+&-add-style{
   background-color: $primary-color !important;
 }
-
+&-save-style{
+  background-color: $secondary-color !important;
+  margin: 8px;
+}
+}
 .time-cell{
   width: 72px;
 }

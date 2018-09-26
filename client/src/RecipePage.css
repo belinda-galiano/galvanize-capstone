@@ -2,7 +2,7 @@
   width: 95%; }
 
 .recipe-page-container {
-  padding: 8px;
+  padding: 8px 16px;
   overflow: hidden; }
 
 .recipe-servings {
@@ -16,12 +16,19 @@
   flex-direction: row;
   justify-content: space-between; }
 
+.row-col-align {
+  display: flex;
+  flex-direction: column; }
+
 .tilte {
-  color: #558B2F;
   margin: 16px 0px; }
 
+.subtilte {
+  font-weight: bold; }
+
 .p-tags {
-  color: #0D47A1; }
+  color: #0D47A1;
+  padding-left: 8px; }
 
 .divider-line {
   width: 100%;

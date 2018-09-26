@@ -22,20 +22,20 @@ td, th {
   text-align: right; }
 
 .main-divider {
-  background-color: #000000;
-  height: 10px; }
+  background-color: #558B2F;
+  height: 8px; }
 
 .second-divider {
-  background-color: #000000;
-  padding: 8px;
+  background-color: #558B2F;
+  padding: 6px;
   height: 1px; }
 
 .third-divider {
-  background-color: #000000;
+  background-color: #558B2F;
   padding: 4px;
   height: 1px; }
 
 .divider {
-  background-color: #000000;
+  background-color: #558B2F;
   padding: 0px;
   height: 1px; }

@@ -7,7 +7,7 @@ const IngredientsList = ({ ingredients }) => {
     .map((ingredient, i) => (
       <li key={i} className="mdc-list-item">
         <span className="mdc-list-item__text">
-          <span className="mdc-list-item__primary-text mdc-typography--body1">
+          <span className="mdc-list-item__primary-text mdc-typography--body1" style={{ color: '#000000' }}>
             {ingredient.name}
             {''}
             {ingredient.qty}
@@ -19,7 +19,7 @@ const IngredientsList = ({ ingredients }) => {
 
   return (
     <div>
-      <div style={{ marginTop: '16px' }} className="mdc-typography--subtitle1">Ingredients</div>
+      <div style={{ marginTop: '16px', fontWeight: 'bold' }} className="mdc-typography--subtitle1">Ingredients</div>
       <ul className="mdc-list mdc-list--two-line">
         {list}
       </ul>

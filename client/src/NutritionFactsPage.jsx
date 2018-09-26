@@ -36,7 +36,8 @@ const NutritionFactsPage = ({ id /* nutrition */ }) => (
     <SecondaryHeader name="Nutrition Facts" backTo={`/recipe/${id}`} />
     <div className="mdc-top-app-bar--fixed-adjust">
       <div className="page-container">
-        <table className="nutrition-table center">
+        <BarChart />
+        <table className="nutrition-table center" style={{ marginTop: '16px' }}>
           <tbody>
             {/* <tr colSpan="2">
               <td className="center mdc-typography--headline4"><strong>Nutrition Facts</strong></td>
@@ -46,7 +47,7 @@ const NutritionFactsPage = ({ id /* nutrition */ }) => (
               <td className="right">{nutrition.servingSize}</td>
             </tr>
             <tr>
-              <td colSpan="2" className="main-divider" />
+              <td colSpan="2" className="main-divider" style={{ backgroundColor: '#558B2F' }} />
             </tr>
             <tr>
               <td colSpan="2" className="left"><b>Amount Per Serving</b></td>
@@ -55,17 +56,17 @@ const NutritionFactsPage = ({ id /* nutrition */ }) => (
               <td colSpan="2" className="divider" />
             </tr>
             <tr>
-              <td className="left">
+              <td className="left mdc-typography--body1">
                 <b>Calories</b>
                 &nbsp;
                 {nutrition.calories}
               </td>
             </tr>
             <tr>
-              <td colSpan="2" className="third-divider" />
+              <td colSpan="2" className="third-divider" style={{ backgroundColor: '#558B2F' }} />
             </tr>
             <tr>
-              <td colSpan="2" className="right">
+              <td colSpan="2" className="right mdc-typography--body1">
                 <b>% Daily Value</b>
               </td>
             </tr>
@@ -73,7 +74,7 @@ const NutritionFactsPage = ({ id /* nutrition */ }) => (
               <td colSpan="2" className="divider" />
             </tr>
             <tr>
-              <td className="left">
+              <td className="left mdc-typography--body1">
                 <b>Total&nbsp;Fat</b>
                 &nbsp;
                 {nutrition.totalFat.qty}
@@ -88,7 +89,7 @@ const NutritionFactsPage = ({ id /* nutrition */ }) => (
               <td colSpan="2" className="divider" />
             </tr>
             <tr>
-              <td className="left">
+              <td className="left mdc-typography--body1">
                 &nbsp;&nbsp;&nbsp;Saturated&nbsp;Fat
                   &nbsp;
                 {nutrition.totalFat.saturatedFat.qty}
@@ -103,7 +104,7 @@ const NutritionFactsPage = ({ id /* nutrition */ }) => (
               <td colSpan="2" className="divider" />
             </tr>
             <tr>
-              <td className="left">
+              <td className="left mdc-typography--body1">
                 &nbsp;&nbsp;&nbsp;
                 <i>Trans</i>
                 &nbsp;Fat
@@ -116,7 +117,7 @@ const NutritionFactsPage = ({ id /* nutrition */ }) => (
               <td colSpan="2" className="divider" />
             </tr>
             <tr>
-              <td className="left">
+              <td className="left mdc-typography--body1">
                 <b>Cholesterol</b>
                 &nbsp;
                 {nutrition.cholesterol.qty}
@@ -131,7 +132,7 @@ const NutritionFactsPage = ({ id /* nutrition */ }) => (
               <td colSpan="2" className="divider" />
             </tr>
             <tr>
-              <td className="left">
+              <td className="left mdc-typography--body1">
                 <b>Sodium</b>
                 &nbsp;
                 {nutrition.sodium.qty}
@@ -146,7 +147,7 @@ const NutritionFactsPage = ({ id /* nutrition */ }) => (
               <td colSpan="2" className="divider" />
             </tr>
             <tr>
-              <td className="left">
+              <td className="left mdc-typography--body1">
                 <b>Total Carbohydrate</b>
                 &nbsp;
                 {nutrition.totalCarbohydrate.qty}
@@ -161,7 +162,7 @@ const NutritionFactsPage = ({ id /* nutrition */ }) => (
               <td colSpan="2" className="divider" />
             </tr>
             <tr>
-              <td className="left">
+              <td className="left mdc-typography--body1">
                 &nbsp;&nbsp;&nbsp;Dietary&nbsp;Fiber
                   &nbsp;
                 {nutrition.totalCarbohydrate.dietaryFiber.qty}
@@ -176,7 +177,7 @@ const NutritionFactsPage = ({ id /* nutrition */ }) => (
               <td colSpan="2" className="divider" />
             </tr>
             <tr>
-              <td className="left">
+              <td className="left mdc-typography--body1">
                 &nbsp;&nbsp;&nbsp;Sugars
 
                 {nutrition.totalCarbohydrate.sugars.qty}
@@ -188,7 +189,7 @@ const NutritionFactsPage = ({ id /* nutrition */ }) => (
               <td colSpan="2" className="divider" />
             </tr>
             <tr>
-              <td className="left">
+              <td className="left mdc-typography--body1">
                 <b>Protein</b>
                 &nbsp;
                 {nutrition.protein.qty}
@@ -197,10 +198,10 @@ const NutritionFactsPage = ({ id /* nutrition */ }) => (
               <td className="right" />
             </tr>
             <tr>
-              <td colSpan="2" className="second-divider" />
+              <td colSpan="2" className="second-divider" style={{ backgroundColor: '#558B2F' }} />
             </tr>
             <tr>
-              <td className="left">Vitamin A</td>
+              <td className="left mdc-typography--body1">Vitamin A</td>
               <td className="right">
                 {nutrition.vitaminA.perc}
                 &nbsp;%
@@ -210,7 +211,7 @@ const NutritionFactsPage = ({ id /* nutrition */ }) => (
               <td colSpan="2" className="divider" />
             </tr>
             <tr>
-              <td className="left">Vitamin B</td>
+              <td className="left mdc-typography--body1">Vitamin B</td>
               <td className="right">
                 {nutrition.vitaminB.perc}
                 &nbsp;%
@@ -220,7 +221,7 @@ const NutritionFactsPage = ({ id /* nutrition */ }) => (
               <td colSpan="2" className="divider" />
             </tr>
             <tr>
-              <td className="left">Vitamin C</td>
+              <td className="left mdc-typography--body1">Vitamin C</td>
               <td className="right">
                 {nutrition.vitaminC.perc}
                 &nbsp;%
@@ -230,7 +231,7 @@ const NutritionFactsPage = ({ id /* nutrition */ }) => (
               <td colSpan="2" className="divider" />
             </tr>
             <tr>
-              <td className="left">Vitamin D</td>
+              <td className="left mdc-typography--body1">Vitamin D</td>
               <td className="right">
                 {nutrition.vitaminD.perc}
                 &nbsp;%
@@ -240,7 +241,7 @@ const NutritionFactsPage = ({ id /* nutrition */ }) => (
               <td colSpan="2" className="divider" />
             </tr>
             <tr>
-              <td className="left">Vitamin E</td>
+              <td className="left mdc-typography--body1">Vitamin E</td>
               <td className="right">
                 {nutrition.vitaminE.perc}
                 &nbsp;%
@@ -250,7 +251,7 @@ const NutritionFactsPage = ({ id /* nutrition */ }) => (
               <td colSpan="2" className="divider" />
             </tr>
             <tr>
-              <td className="left">Calcium</td>
+              <td className="left mdc-typography--body1">Calcium</td>
               <td className="right">
                 {nutrition.calcium.perc}
                 &nbsp;%
@@ -260,7 +261,7 @@ const NutritionFactsPage = ({ id /* nutrition */ }) => (
               <td colSpan="2" className="divider" />
             </tr>
             <tr>
-              <td className="left">Iron</td>
+              <td className="left mdc-typography--body1">Iron</td>
               <td className="right">
                 {nutrition.iron.qty}
                 &nbsp;%
@@ -270,7 +271,7 @@ const NutritionFactsPage = ({ id /* nutrition */ }) => (
               <td colSpan="2" className="divider" />
             </tr>
             <tr>
-              <td className="left">Potassium</td>
+              <td className="left mdc-typography--body1">Potassium</td>
               <td className="right">
                 {nutrition.potassium.perc}
                 &nbsp;%
@@ -280,13 +281,13 @@ const NutritionFactsPage = ({ id /* nutrition */ }) => (
               <td colSpan="2" className="divider" />
             </tr>
             <tr>
-              <td colSpan="2">Percent Daily Values are based on a 2,000 calorie diet.</td>
+              <td colSpan="2" className="mdc-typography--caption" style={{ marginBottom: '16px' }}>Percent Daily Values are based on a 2,000 calorie diet.</td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
-    <BarChart />
+
   </div>
 
 );

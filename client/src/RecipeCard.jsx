@@ -33,8 +33,8 @@ class RecipeCard extends React.Component {
         <div className="my-card mdc-elevation--z2" style={image ? { backgroundImage: `url(${image})` } : null}>
           <div className="text-card">
             <div className="text-padding">
-              <h6 className="mdc-typography--headline6">{title}</h6>
-              <p className="mdc-typography--body2 text-tags">
+              <h6 className="mdc-typography--headline5">{title}</h6>
+              <p className="mdc-typography--body1 text-tags">
                 {tags.map(t => (
                   <span key={t} style={{ marginLeft: '8px' }}>{t}</span>
                 ))}

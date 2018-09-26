@@ -131,7 +131,7 @@ class RecipeForm extends Component {
           </button>
           <TextField name="Notes" value={notes} field="notes" onChange={this.handleChange} isTextArea textCls="form-textarea" />
           <div className="align-right">
-            <button type="submit" className="mdc-button mdc-button--raised btn-color mdc-typography--button">
+            <button type="submit" className=" btn-save-style mdc-button mdc-button--raised btn-color mdc-typography--button">
           Save
             </button>
           </div>

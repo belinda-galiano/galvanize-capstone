@@ -12,6 +12,10 @@
 .btn-add-style {
   background-color: #558B2F !important; }
 
+.btn-save-style {
+  background-color: #E91E63 !important;
+  margin: 8px; }
+
 .time-cell {
   width: 72px; }
 

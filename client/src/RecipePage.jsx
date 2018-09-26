@@ -6,6 +6,7 @@ import './RecipePage.css';
 import IngredientsList from './IngredientsList';
 import DirectionsList from './DirectionsList';
 import SecondaryHeader from './SecondaryHeader';
+import Footer from './Footer';
 
 const RecipePage = ({ recipe, toggleFavorite }) => {
   if (!recipe) {
@@ -29,35 +30,40 @@ const RecipePage = ({ recipe, toggleFavorite }) => {
             </Link>
           </div>
           <h5 className="mdc-typography--headline5 tilte">{recipe.title}</h5>
-          <p className="mdc-typography--subtitle2 p-tags" style={{ marginLeft: '8px' }}>{recipe.tags}</p>
-          <div className="row-align">
+          <p className="mdc-typography--subtitle2 p-tags">{recipe.tags}</p>
+          <div className="divider-line margin-between-8" />
+          <div className="row-align" style={{ justifyContent: 'flex-start' }}>
             <i className="material-icons">
               timelapse
             </i>
-            <div className="mdc-typography--subtitle2">
-              <div>Active</div>
-              <div>
-                {Math.floor(recipe.time.active / 60)}
-                {' '}
-                hours
+            <div style={{ paddingLeft: '16px' }}>
+              <div className="mdc-typography--subtitle2" style={{ display: 'flex' }}>
+                <div className="subtilte" style={{ width: '50px' }}>Active&nbsp;</div>
+                <div>
+                  &nbsp;
+                  {Math.floor(recipe.time.active / 60)}
+                  h
+                  &nbsp;
+                </div>
+                <div>
+                  &nbsp;
+                  {recipe.time.active % 60}
+                  min
+                </div>
               </div>
-              <div>
-                {recipe.time.active % 60}
-                {' '}
-              minutes
-              </div>
-            </div>
-            <div className="mdc-typography--subtitle2">
-              <div>Total</div>
-              <div>
-                {Math.floor(recipe.time.total / 60)}
-                {' '}
-                hours
-              </div>
-              <div>
-                {recipe.time.total % 60}
-                {' '}
-              minutes
+              <div className="mdc-typography--subtitle2" style={{ display: 'flex' }}>
+                <div className="subtilte" style={{ width: '50px' }}>Total&nbsp;</div>
+                <div>
+                  &nbsp;
+                  {Math.floor(recipe.time.total / 60)}
+                  h
+                  &nbsp;
+                </div>
+                <div>
+                  &nbsp;
+                  {recipe.time.total % 60}
+                  min
+                </div>
               </div>
             </div>
           </div>
@@ -67,30 +73,31 @@ const RecipePage = ({ recipe, toggleFavorite }) => {
             Nutrition
           </Link>
           <div className="divider-line margin-between-8" />
-
-          <label tabIndex={1} className="mdc-typography--subtitle1">
+          <label tabIndex={1} className="mdc-typography--subtitle1 subtilte">
             Servings
             <select>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
+              <option className="mdc-typography--body1">1</option>
+              <option className="mdc-typography--body1">2</option>
+              <option className="mdc-typography--body1">3</option>
             </select>
           </label>
+          <div className="divider-line margin-between-8" />
           <IngredientsList ingredients={recipe.ingredients} />
           <div>
             <div className="divider-line " />
-            <h5 className="mdc-typography--subtitle1">Directions</h5>
+            <h5 className="mdc-typography--subtitle1 subtilte">Directions</h5>
             <DirectionsList directions={recipe.directions} />
-            {' '}
             <div className="divider-line " />
-            <h5 className="mdc-typography--subtitle1">Notes</h5>
-            <p>
+            <h5 className="mdc-typography--subtitle1 subtilte">Notes</h5>
+            <p className="mdc-typography--body1">
               {recipe.notes}
             </p>
           </div>
         </div>
       </div>
-    </div>);
+      <Footer />
+    </div>
+  );
 };
 
 export default RecipePage;
