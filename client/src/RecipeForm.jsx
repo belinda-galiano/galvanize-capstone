@@ -17,7 +17,7 @@ class RecipeForm extends Component {
       activeMinutes: '',
       totalHours: '',
       totalMinutes: '',
-      servings: '4',
+      servings: '',
       iname: '',
       iqty: '',
       inote: '',
@@ -31,6 +31,10 @@ class RecipeForm extends Component {
     this.addDirection = this.addDirection.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  componentDidMount() {
+    window.scrollTo(0, 0);
   }
 
   addDirection() {
@@ -72,12 +76,11 @@ class RecipeForm extends Component {
       ...this.state,
       tags: this.state.tags.split(),
       time: {
-        active: [Number(this.state.activeHours), Number(this.state.activeMinutes)],
-        total: [Number(this.state.totalHours), Number(this.state.totalMinutes)],
+        active: Number(this.state.activeHours) * 60 + Number(this.state.activeMinutes),
+        total: Number(this.state.totalHours) * 60 + Number(this.state.totalMinutes),
       },
       favorite: true,
     };
-
     fetch('http://localhost:8080/recipes', {
       method: 'POST',
       headers: {
@@ -87,12 +90,7 @@ class RecipeForm extends Component {
     })
       .then(response => response.json())
       .then(recipe => this.props.saveRecipe(recipe));
-
     navigate('/my-recipes');
-  }
-
-  componentDidMount() {
-    window.scrollTo(0, 0);
   }
 
   render() {
@@ -129,7 +127,7 @@ class RecipeForm extends Component {
           <TextField name="Note" value={inote} field="inote" onChange={this.handleChange} />
           <button type="button" className="mdc-button mdc-button--unelevated btn-add-style mdc-typography--button" onClick={this.addIngredient}>
             <i className="material-icons mdc-button__icon" aria-hidden="true">add</i>
-              Add ingredient
+            Add ingredient
           </button>
           <div className="my-text-label">Directions</div>
           <p className="mdc-typography--body2 highlight-line">We recomend write the directions by steps</p>
@@ -141,12 +139,12 @@ class RecipeForm extends Component {
           <TextField value={step} field="step" onChange={this.handleChange} isTextArea textCls="form-textarea" />
           <button type="button" className="mdc-button mdc-button--unelevated btn-add-style mdc-typography--button" onClick={this.addDirection}>
             <i className="material-icons mdc-button__icon" aria-hidden="true">add</i>
-              Add directions
+            Add directions
           </button>
           <TextField name="Notes" value={notes} field="notes" onChange={this.handleChange} isTextArea textCls="form-textarea" />
           <div className="align-right">
             <button type="submit" className=" btn-save-style mdc-button mdc-button--raised btn-color mdc-typography--button">
-          Save
+              Save
             </button>
           </div>
         </div>

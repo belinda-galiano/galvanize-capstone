@@ -28,6 +28,13 @@ module.exports.ingredients = [
     { name: 'hazelnut oil', qty: '1 tsp', note: '' },
     { name: 'rosemary', qty: '1 spring', note: 'finely chopped' },
   ],
+  [
+    { name: 'dragon fruit', qty: '200 g', note: 'frozen,unsweetened' },
+    { name: 'raspberries', qty: '1/2 cup', note: 'or other fruit' },
+    { name: 'bananas', qty: '100 g', note: 'peeled, sliced, and frozen' },
+    { name: 'Vegan Vanilla Protein Powder ', qty: '1 tsp', note: '' },
+    { name: 'dairy-free milk', qty: '1/2 cup', note: '' },
+  ],
 ];
 
 module.exports.recipes = [
@@ -60,12 +67,24 @@ module.exports.recipes = [
   {
     title: 'Roasted Beet Hummus with Hazelnut Oil & Rosemary',
     image: '/Roasted_Beet_Hummus_with_Hazelnut_Oil_&_Rosemary.png',
-    tags: ['#beans', '#beet', 'tahini'].join('|||'),
+    tags: ['#beans', '#beet', '#tahini'].join('|||'),
     active_time: 10,
     total_time: 10,
     directions: [
       'Using a name processor fitted with an S-blade, combine beans, beet pieces, tahini, maple syrup, lemon juice, salt, and pepper and process until completely smooth, 3 to 5 minutes. Season with more salt, if needed.',
       'Transfer to a serving bowl, drizzle olive oil and hazelnut over it and then sprinkle with rosemary. Serve with fresh bread, crackers, or veggies.'].join('|||'),
     notes: 'This Roasted Beet Hummus with Hazelnut Oil & Rosemary recipe is a bright snack worthy of serving to guests but simple enough to enjoy with weekday meals.    Taken from https://www.vegetarianventures.com/roasted-beet-hummus-with-hazelnut-oil-rosemary/',
+  },
+  {
+    title: 'Creamy Dragon Fruit Smoothie Bowl',
+    image: '/Fruit_Smoothie_Bowls_5_minutes.png',
+    tags: ['#Gluten-Free, #Vegan'].join('|||'),
+    active_time: 5,
+    total_time: 5,
+    directions: [
+      'To a high-speed blender, add frozen dragon fruit, frozen raspberries, banana, protein powder, and dairy-free milk (starting with lower end of range).Blend until creamy and smooth.',
+      'Taste and adjust flavor as needed, adding more banana for sweetness, dairy-free milk for creaminess, or berries for more intense berry flavor.',
+      'Divide between serving bowls and enjoy as is or top with fruit fruit, granola, hemp seeds, and coconut flakes (optional).'].join('|||'),
+    notes: 'The trick to a thick smoothie bowl is being patient and blending slowly, adding only as much liquid as necessary.',
   }
 ];

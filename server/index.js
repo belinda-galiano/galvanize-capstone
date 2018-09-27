@@ -69,8 +69,8 @@ app.post('/recipes', (req, res) => {
     directions: req.body.directions.join('|||'),
     notes: req.body.notes,
     favorite: Boolean(req.body.favorite),
-    active_time: req.body.time.active[0] * 60 + req.body.time.active[1],
-    total_time: req.body.time.total[0] * 60 + req.body.time.total[1],
+    active_time: req.body.time.active,
+    total_time: req.body.time.total
   })
     .returning('id')
     .then(id => saveIngredients(req.body.ingredients, id[0]))

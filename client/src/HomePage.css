@@ -1,3 +1,18 @@
+/* ------- CSS Sticky Footer ---------- */
+html, body, .flex-body, #root {
+  height: 100%; }
+
+.flex-body {
+  display: flex;
+  flex-direction: column; }
+
+.content {
+  flex: 1 0 auto; }
+
+.footer {
+  flex-shrink: 0; }
+
+/* ------------------------------------ */
 .homepage-container {
   display: flex;
   flex-direction: column;
