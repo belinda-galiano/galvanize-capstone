@@ -1,3 +1,5 @@
+## This is a project in progress that I am developing.
+
 # galvanize-capstone
 What we eat is central to our health. The food gives our bodies the "information" and the materials they need to function properly. If we don't get the right information, our metabolic processes suffer and our health declines.
 
