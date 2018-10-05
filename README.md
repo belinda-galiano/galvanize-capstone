@@ -66,7 +66,8 @@ Belinda Galiano
 #### contact me at [Linkedin](https://www.linkedin.com/in/belinda-galiano/)
 
 ## License
-<Copyright Belinda Galiano>
+
+Copyright Belinda Galiano
 
 Usage of the works is permitted provided that this instrument is retained with the works, so that any entity that uses the works is notified of this instrument.
 
