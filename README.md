@@ -1,3 +1,5 @@
+## This is a project in progress that I am developing.
+
 # galvanize-capstone
 What we eat is central to our health. The food gives our bodies the "information" and the materials they need to function properly. If we don't get the right information, our metabolic processes suffer and our health declines.
 
@@ -57,3 +59,16 @@ This links to the board in trello.com where I have some of the user stories of t
 ![recipe_ingredient_create_1.png](https://github.com/belinda-galiano/galvanize-capstone/blob/master/plan_my_meal%20mockup/recipe_ingredient_create_1.png)
 
 ![SignUp_form_mobile.png](https://github.com/belinda-galiano/galvanize-capstone/blob/master/plan_my_meal%20mockup/SignUp_form_mobile.png)
+
+## Author
+Belinda Galiano
+
+#### contact me at [Linkedin](https://www.linkedin.com/in/belinda-galiano/)
+
+## License
+
+Copyright Belinda Galiano
+
+Usage of the works is permitted provided that this instrument is retained with the works, so that any entity that uses the works is notified of this instrument.
+
+DISCLAIMER: THE WORKS ARE WITHOUT WARRANTY.
