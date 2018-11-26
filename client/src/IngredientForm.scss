@@ -1,3 +1,5 @@
+
+@media (max-width: 320px){
 .form-container {
   display: flex;
   flex-direction: column;
@@ -23,4 +25,5 @@
   align-items: center;
   justify-content: flex-end;
   margin-bottom: 8px;
+}
 }

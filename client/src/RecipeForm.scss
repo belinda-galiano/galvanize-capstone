@@ -1,5 +1,6 @@
 @import './variables.scss';
 
+@media (max-width: 320px){
 $default-form-width: 350px;
 
 .align-right{
@@ -56,4 +57,5 @@ $default-form-width: 350px;
     padding: 4px 8px; 
     overflow: hidden;
   }
+}
 }

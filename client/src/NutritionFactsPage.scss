@@ -1,5 +1,6 @@
 @import './variables.scss';
 
+@media (max-width: 320px){
 .page-container{
 margin:0px auto;
 padding: 8px;
@@ -41,4 +42,5 @@ td, th{
   background-color:$primary-color; 
   padding: 0px;
   height:1px;
+}
 }

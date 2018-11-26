@@ -104,15 +104,6 @@ class BarChart extends React.Component {
       .attr('x', textXOffset + 10)
       .delay((d, i) => i * 30);
 
-    // .on('mouseover', (d) => {
-    //   d3.select(this)
-    //     .style('opacity', 0.5)
-    //     .style('fill', 'green');
-    // })
-    // .on('mouseout', (d) => {
-    //   d3.select(this)
-    //     .style('opacity', 1);
-    // });
 
     svg.selectAll('text')
       .data(data)

@@ -1,5 +1,6 @@
 @import './variables.scss';
 
+@media (max-width: 320px){
 $tags-color: #0D47A1;
 
 .recipe { 
@@ -55,3 +56,4 @@ $tags-color: #0D47A1;
   .serving-cell{
     height: 44px;
   }
+}

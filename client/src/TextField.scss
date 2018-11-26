@@ -1,5 +1,6 @@
 @import './variables.scss';
 
+@media (max-width: 320px){
 .el-margin{
   margin: 8px 0px;
 }
@@ -11,4 +12,5 @@
 .my-text-label {
   display: block;
   color: $primary-color;
+}
 }

@@ -1,5 +1,7 @@
+@media (max-width: 320px){
 .container-background{
 background:#dedede;
 height: 44px;
 padding:8px 0px;
+}
 }
