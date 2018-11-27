@@ -1,55 +1,47 @@
- 
-/* ------- CSS Sticky Footer ---------- */
-html, body, .flex-body, #root {
-  height: 100%; }
-
-.flex-body {
-  display: flex;
-  flex-direction: column; }
-
-.content {
-  flex: 1 0 auto; }
-
-.footer {
-  flex-shrink: 0; }
-
-/* ------------------------------------ */
-.homepage-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 16px;
-  overflow: hidden; }
-  .homepage-container .search-align {
+@media (max-width: 420px) {
+  /* ------- CSS Sticky Footer ---------- */
+  html, body, .flex-body, #root {
+    height: 100%; }
+  .flex-body {
+    display: flex;
+    flex-direction: column; }
+  .content {
+    flex: 1 0 auto; }
+  .footer {
+    flex-shrink: 0; }
+  /* ------------------------------------ */
+  .homepage-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    overflow: hidden; }
+    .homepage-container .search-align {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center; }
+  .divider-line {
+    width: 100%;
+    height: 1px;
+    background: #DEDEDE;
+    margin: 16px 0px; }
+  .mdc-button--unelevated:not(:disabled) {
+    background-color: #e91e63; }
+  .headline6-align {
+    width: 100%;
+    padding-left: 24px;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center; }
-
-.divider-line {
-  width: 100%;
-  height: 1px;
-  background: #DEDEDE;
-  margin: 16px 0px; }
-
-.mdc-button--unelevated:not(:disabled) {
-  background-color: #e91e63; }
-
-.headline6-align {
-  width: 100%;
-  padding-left: 24px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start; }
-  .headline6-align .headline6-style {
-    color: #558B2F;
-    margin: 8px 0px; }
-
-.see-allbtn-align {
-  width: 100%;
-  padding-right: 24px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  margin: 8px 0px; }
+    justify-content: flex-start; }
+    .headline6-align .headline6-style {
+      color: #558B2F;
+      margin: 8px 0px; }
+  .see-allbtn-align {
+    width: 100%;
+    padding-right: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 8px 0px; } }

@@ -1,0 +1,53 @@
+@import './variables.scss';
+
+@media (max-width: 420px){
+  .welcome-body{
+    background: #FAFAFA;
+    height: 100%;
+  }
+  .welcomepage-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    margin-top: 16px;
+    overflow: hidden;
+  }
+  .subtitle-login{
+    text-align: right;
+    padding-right: 16px;
+    color: $secondary-color;
+  
+  }
+  .logo-welcome{
+    border: solid 1px;
+    color:#000000;
+    padding: 8px;
+    margin-bottom: 32px;
+  }
+  .column-center{
+    display:flex;
+    flex-direction: column;    
+  }
+.signup-button{
+   width: 255px;
+   height: 40px;
+   border-radius: 19px;
+   margin:8px;
+}
+.signup-google{
+  background: white !important;
+  border: solid 1px;
+  border-color: #000000;
+  color: #000000 !important;
+}
+.signup-account{
+  background:$primary-color;
+  border: none;
+  color: #ffffff;
+}
+.terms{
+  color: #757575;
+  margin:70px 16px 16px 16px;
+}
+}

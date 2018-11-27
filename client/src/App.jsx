@@ -11,6 +11,7 @@ import RecipeFormContainer from './RecipeFormContainer';
 import HomeContainer from './HomeContainer';
 import MyRecipesContainer from './MyRecipesContainer';
 import { getRecipes } from './api';
+import WelcomePage from './WelcomePage';
 
 const store = createStore(reducer);
 getRecipes(store);
@@ -18,6 +19,7 @@ getRecipes(store);
 const App = () => (
   <Provider store={store}>
     <Router>
+      <WelcomePage path="/welcome-page" />
       <HomeContainer path="/" />
       <MyRecipesContainer path="/my-recipes" />
       <RecipePageContainer path="/recipe/:id" />
