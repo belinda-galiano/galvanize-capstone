@@ -2,12 +2,17 @@
   .welcome-body {
     background: #FAFAFA;
     height: 100%; }
+  .top-header {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between; }
   .welcomepage-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 16px;
+    margin: 16px;
     overflow: hidden; }
   .subtitle-login {
     text-align: right;

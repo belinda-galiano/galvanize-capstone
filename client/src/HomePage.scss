@@ -1,4 +1,3 @@
-@media (max-width: 420px){
 /* ------- CSS Sticky Footer ---------- */
 html, body, .flex-body, #root {
   height: 100%;
@@ -41,6 +40,13 @@ html, body, .flex-body, #root {
 
 .mdc-button--unelevated:not(:disabled) {
   background-color: #e91e63;
+  width: 240px;
+}
+.mdc-button--raised:not(:disabled) {
+  background-color: #FFFFFF;
+  color: #e91e63;
+  margin-bottom: 5px;
+  width:160px;
 }
 .headline6-align{
   width: 100%;
@@ -61,5 +67,4 @@ html, body, .flex-body, #root {
   flex-direction: row;
   justify-content: flex-end;
   margin: 8px 0px;
-}
 }

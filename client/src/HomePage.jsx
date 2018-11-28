@@ -16,19 +16,20 @@ const HomePage = ({ recipes }) => (
         <div className="search-align">
           <Search />
         </div>
-        { recipes.map(recipe => <RecipeCardContainer {...recipe} key={recipe.title} />)}
-        <button className="mdc-button see-allbtn-align">
-            See all
+        {recipes.map(recipe => <RecipeCardContainer {...recipe} key={recipe.title} />)}
+        <button type="button" className="mdc-button see-allbtn-align">
+          See all
         </button>
         <div className="divider-line" />
-        <Link to="/recipe-form" className="mdc-button mdc-button--outlined mdc-elevation--z2 mdc-typography--button">
-        CREATE RECIPE
+        <Link to="/recipe-form" className="mdc-button mdc-button--outlined mdc-elevation--z2 mdc-typography--button" style={{ marginTop: '24px', marginBottom: '24px' }}>
+          CREATE RECIPE
         </Link>
-        {/* <div className="divider-line" /> */}
-        {/* <button className="mdc-button mdc-button--unelevated mdc-typography--button sign-up-btn">
-        Sign Up
-        </button>
-        <p>It's free!</p> */}
+        <div className="divider-line" />
+        <Link to="/welcome-page" type="button" className="mdc-button mdc-button--unelevated">
+          Sign Up
+        </Link>
+        <p>It's free!</p>
+        <button type="button" className="mdc-button mdc-button--raised">Log in</button>
       </div>
     </div>
     <Footer />
