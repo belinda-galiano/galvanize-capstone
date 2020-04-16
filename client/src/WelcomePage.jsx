@@ -22,9 +22,9 @@ const WelcomePage = () => (
         <button type="button" className="mdc-button mdc-button--unelevated btn-add-style mdc-typography--button signup-button signup-google">
         Continue with Google
         </button>
-        <button type="button" className="mdc-button mdc-button--unelevated btn-add-style mdc-typography--button signup-button signup-account">
+        <Link to="/create-account" type="button" className="mdc-button mdc-button--unelevated btn-add-style mdc-typography--button signup-button signup-account">
         Create Account
-        </button>
+        </Link>
       </div>
       <p className="mdc-typography--body1">It is free!</p>
       <p className="mdc-typography--caption terms">
